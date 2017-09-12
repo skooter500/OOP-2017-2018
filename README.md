@@ -85,7 +85,7 @@ I prefer to draw the shapes on paper first before I try and work out the coordin
 
 ### Part 1 - Cloning git repositories
 
-Clone the course website
+Clone the course website:
 
 - [Install git](https://www.atlassian.com/git/tutorials/install-git) if you need to. It should be installed on the lab computers already
 - Start git bash
@@ -102,4 +102,9 @@ Clone NILL, a game I programmed in Processing and get it running:
 - Find the NILL folder that was created and double click on the file NILL.pde. It should open in Processing
 - You need to install the Minim library and the Game control libraries to make NILL work. Go to Sketch | IMport Library | Add library to do this
 - See if you can collect all the pods
-- Have a look down through the source code for NILL
+- Have a look through the source code for NILL and see if you can figure out the following
+    - What are the Java datatypes?
+    - What classes are in the project?
+    - How is the landscape drawn?
+    - How does the game keep track of all the objects on screen?
+
