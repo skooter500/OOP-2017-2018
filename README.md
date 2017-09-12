@@ -1,4 +1,4 @@
-# DT228/DT282 Object Oriented Programming 2016-2017
+# DT228/DT282 Object Oriented Programming 2017-2018
 
 Resources
 ---------
@@ -81,7 +81,7 @@ Write a processing sketch to draw the following shapes:
 
 ![Sketch](images/p1.2.png)
 
-I prefer to draw the shapes on paper first before I try and work out the coordinates. Try experimenting with different colours!
+I prefer to draw the shapes on paper first before I try and work out the coordinates. Try experimenting with different colours! 
 
 ### Part 1 - Cloning git repositories
 
