@@ -108,3 +108,31 @@ Clone NILL, a game I programmed in Processing and get it running:
     - How is the landscape drawn?
     - How does the game keep track of all the objects on screen?
 
+## Tutorial
+
+Clone the repository for NILL and get the game working as described above. Create a new branch by typing:
+
+```git checkout -b tutorial```
+
+Now make the following changes to the game:
+
+- Change the colour of the Ship
+- Change the movement speed of the ship
+- Change how fast the ship rotates
+- Change the force of gravity on the ship
+- Increase the amount of fuel the ship starts with
+- Make the powerups spawn twice as fast
+- Make the game spawn fuel twice as frequently as asteroids
+- Change the bumpiness of the terrain
+- Add more pods
+- Draw the fuel pods as octogons instead of pentagons
+- Increase the number of stars in the background
+- Change the keys used to control the ship to be A, D and W instead of left, right and up
+- Disable collisions between the ship and the terrain
+
+Commit your changes to the new branch by typing:
+
+```bash
+git add . -- all
+git commit -m "tutorial changes"
+```
