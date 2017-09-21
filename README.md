@@ -93,6 +93,21 @@ if (keyPressed)
 - Make some sound effects and add them to the game. I used [BFXR](http://www.bfxr.net/) to make the sounds and the Minim library to play them, but you might prefer to use the [built-in audio methods in Processing](https://processing.org/tutorials/sound/).
 - Add the splash screen and game over screen
 
+- [Solution](http://github.com/skooter500/NILL)
+
+## Tutorial
+- Clone the repository for the course by typing:
+    ```bash
+    git clone https://github.com/skooter500/OOP-2017-2018
+    ```
+- If you already have the course cloned, you can pull the latest changes by cd'ing to the folder where you cloned the course and typing:
+	```bash
+	git pull
+	```
+- Open the rick_n_morty.pde sketch. This sketch loads the background image and sound. Complete the sketch so that it does this:
+
+[![YouTube](http://img.youtube.com/vi/BR1p2Dl6ELE/0.jpg)](https://www.youtube.com/watch?v=BR1p2Dl6ELE)
+	
 # Week 1 - Introduction to Processing and the course
 
 ## Lecture
