@@ -93,7 +93,7 @@ if (keyPressed)
 - Make some sound effects and add them to the game. I used [BFXR](http://www.bfxr.net/) to make the sounds and the Minim library to play them, but you might prefer to use the [built-in audio methods in Processing](https://processing.org/tutorials/sound/).
 - Add the splash screen and game over screen
 
-- [Solution](http://github.com/skooter500/NILL)
+- [Solution](http://github.com/skooter500/BugZap)
 
 ## Tutorial
 - Clone the repository for the course by typing:

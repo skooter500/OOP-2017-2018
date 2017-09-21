@@ -9,7 +9,8 @@ void setup()
   
   // Load the soundfile
   sound = new SoundFile(this, "1.wav");
-  
+  // To play the sound
+  // sound.play();
 }
 
 PImage back;
