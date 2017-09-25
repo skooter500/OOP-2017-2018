@@ -36,6 +36,11 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
+# Week 3 - Loops
+![Sketch](images/p6.png)
+![Sketch](images/p4.png)
+![Sketch](images/p23.png)
+
 # Week 2 - Variables & conditions
 - [Variables example](processing/variables)
 - [The amanita sketch (the mushroom that moves with the mouse)](processing/amanita)
