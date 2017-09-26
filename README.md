@@ -36,10 +36,55 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
-# Week 3 - Loops
+# Week 3 - Loops & Arrays
 ![Sketch](images/p6.png)
-![Sketch](images/p4.png)
 ![Sketch](images/p23.png)
+
+- [Loops example](processing/loops)
+- [Arrays examples](processing/arrays)
+
+## Lab 
+### Learning outcomes
+- Practice iterating over arrays in Java
+- Practice in using the for loop and variables to generate sequences of numbers
+- Understand how a line graph is made
+- Practice constructing alogorithms as part of a system
+- Practice presenting data visually
+
+Here is [some starter code with examples of arrays](processing/arrays)
+
+Here is what you can try and make today:
+
+![Sketch](images/p7.png)
+
+These are the steps I suggest you follow:
+
+- Figure out how to draw a trend line graph first
+- Then figure out how to leave horizontal and vertical borders around the graph. I would suggest making a variable called border to control this.
+- Then figure out how to scale it so that it scales the data when drawing to the range 0-150. You could make this a variable
+- Then figure out how to draw the horizontal axis. This will be a for loop obviously. You might find the following Java/Processing methods useful:
+  - [The Processing map method](https://processing.org/reference/map_.html)
+  - [textAlign](https://processing.org/reference/textAlign_.html)
+  - [substring](http://www.tutorialspoint.com/java/java_string_substring.htm)
+- Finally figure out how to draw the vertical axis. Another loop! This is the trickiest part I think
+
+Try and parameterise as much of your sketch with variables, so that you could reuse the code to graph other types of data.
+For example, I found it useful to write a method:
+
+```Java
+void drawAxis(float[] data, String[] horizLabels, int verticalIntervals, int maxVertical, float border)
+```
+
+to draw the horizontal and vertical axes. You might like to write seperate methods for the horizontal and vertical axis.
+This took me about an hour to complete today, so it's tricky enough to get everything working, but worth it!
+
+### Advanced!
+
+Try and draw this pie chart:
+
+![Sketch](images/p8.png)
+
+You can use the Processing arc method to do this!
 
 # Week 2 - Variables & conditions
 - [Variables example](processing/variables)
