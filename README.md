@@ -64,6 +64,7 @@ These are the steps I suggest you follow:
 - Then figure out how to scale it so that it scales the data when drawing to the range 0-150. You could make this a variable
 - Then figure out how to draw the horizontal axis. This will be a for loop obviously. You might find the following Java/Processing methods useful:
   - [The Processing map method](https://processing.org/reference/map_.html)
+  - [text](https://processing.org/reference/text_.html) - Prints text to the screen at x and y coordinates
   - [textAlign](https://processing.org/reference/textAlign_.html)
   - [substring](http://www.tutorialspoint.com/java/java_string_substring.htm)
 - Finally figure out how to draw the vertical axis. Another loop! This is the trickiest part I think
