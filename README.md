@@ -79,6 +79,8 @@ void drawAxis(float[] data, String[] horizLabels, int verticalIntervals, int max
 to draw the horizontal and vertical axes. You might like to write seperate methods for the horizontal and vertical axis.
 This took me about an hour to complete today, so it's tricky enough to get everything working, but worth it!
 
+- [Solution](processing/data)
+
 ### Advanced!
 
 Try and draw this pie chart:
@@ -86,6 +88,42 @@ Try and draw this pie chart:
 ![Sketch](images/p8.png)
 
 You can use the Processing arc method to do this!
+
+## Tutorial
+
+[![YouTube](http://img.youtube.com/vi/WXftKFCtPrQ/0.jpg)](https://www.youtube.com/watch?v=WXftKFCtPrQ)
+
+Running Processing from the Java command line:
+
+```Java
+package ie.dit;
+import processing.core.PApplet;
+
+public class AudioViz extends PApplet {
+
+	public void setup()
+    {
+    }
+
+    public void settings()
+    {
+        size(500, 500);
+    }
+
+    public void draw()
+    {
+    	background(0);
+    	stroke(255);
+    	line(100, 100, 200, 200);
+    }
+
+    public static void main(String[] args)
+    {
+        String[] a = {"MAIN"};
+        PApplet.runSketch( a, new AudioViz());
+    }
+}
+```
 
 # Week 2 - Variables & conditions
 - [Variables example](processing/variables)
