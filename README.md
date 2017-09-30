@@ -93,7 +93,7 @@ You can use the Processing arc method to do this!
 
 [![YouTube](http://img.youtube.com/vi/WXftKFCtPrQ/0.jpg)](https://www.youtube.com/watch?v=WXftKFCtPrQ)
 
-Running Processing from the Java command line:
+There is a bug running Processing through Java 9, but hopefully it will be fixed and when it does, this program is a Processing/Java hello world program:
 
 ```Java
 package ie.dit;
@@ -125,6 +125,12 @@ public class AudioViz extends PApplet {
 }
 ```
 
+This is how to compile and run a Processing Java program on Mac:
+
+```bash
+javac -classpath /Applications/Processing.app/Contents/Java/core.jar ie/dit/*.java
+java -classpath /Applications/Processing.app/Contents/Java/core.jar:. ie.dit.ProcessingTest
+```
 # Week 2 - Variables & conditions
 - [Variables example](processing/variables)
 - [The amanita sketch (the mushroom that moves with the mouse)](processing/amanita)
