@@ -36,6 +36,13 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
+# Week 4 - Classes & ArrayList's
+- [Last years lab test](https://github.com/skooter500/OOP-LabTest1-2016)
+- [Download the star dataset](https://raw.githubusercontent.com/skooter500/OOP-LabTest1-2016/master/HabHYG15ly.csv)
+- [loadTable refererence](https://processing.org/reference/loadTable_.html)
+- [map reference](https://processing.org/reference/map_.html)
+- [Classes in Processing](https://processing.org/reference/class.html)
+
 # Week 3 - Loops & Arrays
 ![Sketch](images/p6.png)
 ![Sketch](images/p23.png)
@@ -89,11 +96,19 @@ Try and draw this pie chart:
 
 You can use the Processing arc method to do this!
 
+- [Solution](processing/data)
+
 ## Tutorial
 
 [![YouTube](http://img.youtube.com/vi/WXftKFCtPrQ/0.jpg)](https://www.youtube.com/watch?v=WXftKFCtPrQ)
 
-There is a bug running Processing through Java 9, but hopefully it will be fixed and when it does, this program is a Processing/Java hello world program:
+There is a bug running Processing through Java 9, so you have to run Processing with Java 8 instead
+To change the version of Java to Java 8 on the Mac:
+
+```bash
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+```
 
 ```Java
 package ie.dit;
