@@ -42,6 +42,23 @@ Some assignments from previous years:
 - [loadTable refererence](https://processing.org/reference/loadTable_.html)
 - [map reference](https://processing.org/reference/map_.html)
 - [Classes in Processing](https://processing.org/reference/class.html)
+- [ArrayList reference]()
+
+## Lab
+## Learning outcomes
+- Make classes
+- Use an ArrayList
+- Use the Processing map function
+- Get familiar with loading a CSV dataset
+- Get practice for the lab test
+
+- [Here is the code that we wrote in the class today](processing/StarMap1). It has:
+- A star class with multiple constructors
+- loadTable to load a csv file of data
+- An ArrayList of Star objects
+
+- [See how far you get in completing last years lab test](https://github.com/skooter500/OOP-LabTest1-2016)
+- Don't be tempted to look at the solution, try and code a solution yourself.
 
 # Week 3 - Loops & Arrays
 ![Sketch](images/p6.png)
