@@ -42,7 +42,7 @@ Some assignments from previous years:
 - [loadTable refererence](https://processing.org/reference/loadTable_.html)
 - [map reference](https://processing.org/reference/map_.html)
 - [Classes in Processing](https://processing.org/reference/class.html)
-- [ArrayList reference]()
+- [ArrayList reference](https://processing.org/reference/ArrayList.html)
 
 ## Lab
 ## Learning outcomes
@@ -57,8 +57,8 @@ Some assignments from previous years:
 - loadTable to load a csv file of data
 - An ArrayList of Star objects
 
-[See how far you get in completing last years lab test](https://github.com/skooter500/OOP-LabTest1-2016)
-Don't be tempted to look at the solution, try and code a solution yourself.
+[See how far you get in completing last years lab test](https://github.com/skooter500/OOP-LabTest1-2016).
+Don't be tempted to look at the solution straight away, try and code a solution yourself.
 
 # Week 3 - Loops & Arrays
 ![Sketch](images/p6.png)
