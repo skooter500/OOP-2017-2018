@@ -36,6 +36,14 @@ class Star
     zg = row.getFloat("Zg");
     mag = row.getFloat("AbsMag");
     //..
-    
   }
+  
+  String toString()
+  {
+    return displayName + ", " 
+      + hab + ", "
+      + "(" + xg + ", " + yg + ", " + zg + ")"
+      + mag;
+  }
+  
 }

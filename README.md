@@ -36,7 +36,7 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
-# Week 4 - More on Classes & ArrayList's
+# Week 5 - More on Classes & ArrayList's
 - [Partial solution to the lab test from last year](processing/StarMap1). This has an example of using a class, an ArrayList and it draws the grid.
 - [Our implementation of the Processing map function](processing/map)
 
