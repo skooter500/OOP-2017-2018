@@ -38,6 +38,7 @@ Some assignments from previous years:
 
 # Week 4 - More on Classes & ArrayList's
 - [Partial solution to the lab test from last year](processing/StarMap1). This has an example of using a class, an ArrayList and it draws the grid.
+- [Our implementation of the Processing map function](processing/map)
 
 ## Videos 
 [![YouTube](http://img.youtube.com/vi/nicMAoW6u1g/0.jpg)](https://www.youtube.com/watch?v=nicMAoW6u1g)
