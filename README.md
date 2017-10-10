@@ -36,6 +36,34 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
+# Week 4 - More on Classes & ArrayList's
+- [Partial solution to the lab test from last year](processing/StarMap1). This has an example of using a class, an ArrayList and it draws the grid.
+
+## Videos 
+[![YouTube](http://img.youtube.com/vi/nicMAoW6u1g/0.jpg)](https://www.youtube.com/watch?v=nicMAoW6u1g)
+
+# Lab
+## Learnning outcomes
+- Make classes
+- Use an ArrayList
+- Use the Processing map function
+- Get familiar with loading a CSV dataset
+- Get practice for the lab test
+
+### Part 1  
+Today, try to finish off the last part of [last years lab test](https://github.com/skooter500/OOP-LabTest1-2016), which is being able to click on stars and calculate the distance in parsecs between the two stars. 
+
+### Part 2
+
+- Have a go at completing the [lab test from 2014](https://github.com/skooter500/OOP-2016-2017/blob/master/processing/ExpensesProcessing/Lab%20Test%201.docx?raw=true). It's not as much fun, but you can get the chance to practice a lot of the concepts we have learned in the class in the past couple of weeks:
+	- Making a class with constructors
+	- Loading a dataset
+	- Using an ArrayList
+	- Iterating over an ArrayList
+	- Visualising a dataset
+	- Using the map function
+- Here is a link to [the dataset you need](https://raw.githubusercontent.com/skooter500/DT228-OOP/master/Processing%20Examples/Expenses/data/expenses.txt)
+
 # Week 4 - Classes & ArrayList's
 - [Last years lab test](https://github.com/skooter500/OOP-LabTest1-2016)
 - [Download the star dataset](https://raw.githubusercontent.com/skooter500/OOP-LabTest1-2016/master/HabHYG15ly.csv)

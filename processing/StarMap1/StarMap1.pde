@@ -1,8 +1,47 @@
 void setup()
 {
-  size(800, 800);
+  size(500, 500);
   
   loadData();
+}
+
+void drawGrid()
+{
+  
+  /*
+  // A solution that doesnt use map
+  float border = width * 0.1f;
+  float drawable = width * 0.8f;
+  float gap = drawable / 10.0f;
+  textAlign(CENTER, CENTER);
+  fill(0);
+  float pos = border;
+  for(int xg = -5 ; xg <= 5 ; xg ++)
+  {
+    text(xg, pos, border * 0.5);
+    text(xg, border * 0.5, pos);
+    
+    line(pos, border, pos, height - border);
+    line(border, pos, width - border, pos);   
+    pos += gap;
+  }
+  */
+  
+  
+  // A better solution that uses map!
+  // https://processing.org/reference/map_.html
+  float border = width * 0.1f;
+  textAlign(CENTER, CENTER);
+  fill(0);
+  for(int xg = -5 ; xg <= 5 ; xg ++)
+  {
+    float pos = map(xg, -5, 5, border, width - border); 
+    text(xg, pos, border * 0.5);
+    text(xg, border * 0.5, pos);
+    
+    line(pos, border, pos, height - border);
+    line(border, pos, width - border, pos);   
+  }  
 }
 
 void loadData()
@@ -45,5 +84,5 @@ ArrayList<Star> stars = new ArrayList<Star>();
 
 void draw()
 {
-  
+  drawGrid();
 }
