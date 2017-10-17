@@ -44,12 +44,16 @@ Some assignments from previous years:
 
 - John Conway on the Game of Life:
 
-  [![YouTube](http://img.youtube.com/vi/C2vgICfQawE/0.jpg)](https://www.youtube.com/watch?v=C2vgICfQawE)
+ 	[![YouTube](http://img.youtube.com/vi/FdMzngWchDk/0.jpg)](https://www.youtube.com/watch?v=FdMzngWchDk)
 
 - Epic Conway's Game of Life:
 
-  [![YouTube](http://img.youtube.com/vi/FdMzngWchDk/0.jpg)](https://www.youtube.com/watch?v=FdMzngWchDk)
+  [![YouTube](http://img.youtube.com/vi/C2vgICfQawE/0.jpg)](https://www.youtube.com/watch?v=C2vgICfQawE)
 
+- My project - Infinite Forms   
+  
+  [![YouTube](http://img.youtube.com/vi/MrDllboNJKY/0.jpg)](https://www.youtube.com/watch?v=MrDllboNJKY)
+	
 - And finally, Alan Watts
 
   [![YouTube](http://img.youtube.com/vi/wU0PYcCsL6o/0.jpg)](https://www.youtube.com/watch?v=wU0PYcCsL6o)
@@ -63,13 +67,14 @@ Some assignments from previous years:
 - Practice iterating over a 2D array
 - Discover the amazing power of cellular automata
 
-Try and complete the Game of Life we started in the class today. Here is the [code from the class]().  you weren't in the class, you could take a read of the Game of Life wiki page and have a crack at implementing it from scratch yourselves. It's not too difficult. If you get your basic game of life to evolve, you could try these additions:
+Try and complete the Game of Life we started in the class today. Here is the [code from the class](processing/Life1).  Ive given a list of methods you could implement. If you get your basic game of life to evolve, you could try these additions:
 
 - The method ```void mousePressed()``` gets called in your sketch whenever the mouse is pressed. The method ```mouseDragged``` gets called whenever you hold the mouse down and move it over your sketch. You can get the mouse x and y coordinates by using the built in variables ```mouseX``` and ```mouseY```. You can use these methods to implement mouse drawing. To do this you need to calculate which row and column in the 2D array the mouse is over and then set this cell to be true.
 
 - When you press the space key, the game should pause and unmpause, in other words, not update the game board while the game is paused
 - When you press the c key, the board should clear. In otherwords, you should set every element in th 2D array to be false.
 - When you press the r key, you should randomly set 50% of the elements to be true. To do this, you need to iterate through the array and generate a random number between 0.0f and 1.0f. If the number is > 0.5f, you set the element to be true otherwise set it to be false.
+- Here is [a modification to have colours](https://jimblackler.net/blog/?p=384)
 
 There some interesting starting patterns you can program also. You could write code so that when you press a number key it creates the starting pattern at the mouse x and y. I used the mouse x and y to be the top left of the shape.
 
