@@ -67,7 +67,7 @@ Some assignments from previous years:
 - Practice iterating over a 2D array
 - Discover the amazing power of cellular automata
 
-Try and complete the Game of Life we started in the class today. Here is the [code from the class](processing/Life1).  Ive given a list of methods you could implement. If you get your basic game of life to evolve, you could try these additions:
+Try and complete the Game of Life we started in the class today. Here is the [code from the class](processing/life1).  Ive given a list of methods you could implement. If you get your basic game of life to evolve, you could try these additions:
 
 - The method ```void mousePressed()``` gets called in your sketch whenever the mouse is pressed. The method ```mouseDragged``` gets called whenever you hold the mouse down and move it over your sketch. You can get the mouse x and y coordinates by using the built in variables ```mouseX``` and ```mouseY```. You can use these methods to implement mouse drawing. To do this you need to calculate which row and column in the 2D array the mouse is over and then set this cell to be true.
 
