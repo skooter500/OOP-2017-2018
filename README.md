@@ -36,6 +36,51 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
+# Week 5 - Conway's Game of Life
+
+- Stephen Hawkings on the Game of Life:
+
+  [![YouTube](http://img.youtube.com/vi/CgOcEZinQ2I/0.jpg)](https://www.youtube.com/watch?v=CgOcEZinQ2I)
+
+- John Conway on the Game of Life:
+
+  [![YouTube](http://img.youtube.com/vi/C2vgICfQawE/0.jpg)](https://www.youtube.com/watch?v=C2vgICfQawE)
+
+- Epic Conway's Game of Life:
+
+  [![YouTube](http://img.youtube.com/vi/FdMzngWchDk/0.jpg)](https://www.youtube.com/watch?v=FdMzngWchDk)
+
+- And finally, Alan Watts
+
+  [![YouTube](http://img.youtube.com/vi/wU0PYcCsL6o/0.jpg)](https://www.youtube.com/watch?v=wU0PYcCsL6o)
+
+- [Conway's Game of Life on Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+- [The Game of Life Wiki](http://www.conwaylife.com/wiki/Main_Page)
+
+## Lab
+### Learning Outcomes
+- Complete the game of life code
+- Practice iterating over a 2D array
+- Discover the amazing power of cellular automata
+
+Try and complete the Game of Life we started in the class today. Here is the [code from the class]().  you weren't in the class, you could take a read of the Game of Life wiki page and have a crack at implementing it from scratch yourselves. It's not too difficult. If you get your basic game of life to evolve, you could try these additions:
+
+- The method ```void mousePressed()``` gets called in your sketch whenever the mouse is pressed. The method ```mouseDragged``` gets called whenever you hold the mouse down and move it over your sketch. You can get the mouse x and y coordinates by using the built in variables ```mouseX``` and ```mouseY```. You can use these methods to implement mouse drawing. To do this you need to calculate which row and column in the 2D array the mouse is over and then set this cell to be true.
+
+- When you press the space key, the game should pause and unmpause, in other words, not update the game board while the game is paused
+- When you press the c key, the board should clear. In otherwords, you should set every element in th 2D array to be false.
+- When you press the r key, you should randomly set 50% of the elements to be true. To do this, you need to iterate through the array and generate a random number between 0.0f and 1.0f. If the number is > 0.5f, you set the element to be true otherwise set it to be false.
+
+There some interesting starting patterns you can program also. You could write code so that when you press a number key it creates the starting pattern at the mouse x and y. I used the mouse x and y to be the top left of the shape.
+
+| Pattern | Description |
+|---------|-------------|
+|![Sketch](images/p13.png) | Gosper Gun |
+|![Sketch](images/p14.png) | Lightweight spaceship |
+|![Sketch](images/p15.png) | Tumbler |
+|![Sketch](images/p16.png) | Glider |
+|![Sketch](images/p17.png) | I'm not sure what this is called, but it makes amazing patterns |
+
 # Week 5 - More on Classes & ArrayList's
 - [Partial solution to the lab test from last year](processing/StarMap1). This has an example of using a class, an ArrayList and it draws the grid.
 - [Our implementation of the Processing map function](processing/map)
