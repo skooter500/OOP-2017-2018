@@ -58,9 +58,16 @@ class Board
   // Return true if the cell at row and col is true
   // Do bounds checking in this method to make sure row and col
   // Have valid ranges
-  boolean isOn(int row, int col)
+  boolean isAlive(int row, int col)
   {
-    return false;
+    if (row < 0 || row >= size || col < 0 || col >= size)
+    {
+      return false;
+    }
+    else
+    {
+      return current[row][col];
+    }
   }
   
   // Count the number of live cells around row and col
@@ -69,7 +76,18 @@ class Board
   // This could be a nested loop
   int countLiveCellsAround(int row, int col)
   {
-    return 0;
+    int count = 0;
+    for(int r = row - 1 ; r <= row + 1 ; r ++)
+    {
+      for(int c = col - 1 ; c <= col + 1 ; c ++)
+      {
+        if (! (r == row && c == col) && isAlive(r, c))
+        {
+          count ++;
+        }
+      }
+    }
+    return count;
   }
   
   // This method should apply the rules to each cell
@@ -79,6 +97,41 @@ class Board
   // Also dont forget to call this method from draw() in the main sketch
   void update()
   {
+    for(int row = 0 ; row < size ; row ++)
+    {
+      for (int col = 0 ; col < size ; col ++)
+      {
+        int count = countLiveCellsAround(row, col);
+        if (current[row][col])
+        {
+          if (count == 2 || count == 3)
+          {
+            next[row][col] = true;
+          }
+          else
+          {
+            next[row][col] = false;
+          }
+        }
+        else
+        {
+          if (count == 3)
+          {
+            next[row][col] = true;
+          }
+          else
+          {
+            next[row][col] = false;
+          }
+        }
+      }
+    }
+    
+    boolean[][] temp;
+    temp = current;
+    current = next;
+    next = temp;
+    
   }
   
 }
