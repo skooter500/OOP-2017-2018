@@ -36,7 +36,8 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
-# Week - Git
+# Week 8 - Polymorphism
+- [Dog, Cats & Sheep example](processing/DogsCats1)
 
 # Week 7 - git
 - All about git
