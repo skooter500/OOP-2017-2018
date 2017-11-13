@@ -1,7 +1,7 @@
 class Board
 {
-  boolean[][] current;
-  boolean[][] next;
+  color[][] current;
+  color[][] next;
   
   int size;
   
@@ -10,8 +10,8 @@ class Board
   Board(int size)
   {
     this.size = size;
-    current = new boolean[size][size];
-    next = new boolean[size][size];
+    current = new color[size][size];
+    next = new color[size][size];
     cellSize = width / (float) size;
     randomise();
   }
@@ -22,7 +22,7 @@ class Board
     {
       for (int col = 0 ; col < size ; col ++)
       {
-        if (current[row][col])
+        if (current[row][col] != 0)
         {
           fill(0, 255, 0);
         }
@@ -49,9 +49,14 @@ class Board
           current[row][col] = true;
         }
         */
-        current[row][col] = (dice == 1);
+        current[row][col] = (dice == 1) ? RandomColor() : 0;
       }
     }
+  }
+  
+  color RandomColor()
+  {
+    return color(random(0, 255), random(0, 255), random(0, 255));
   }
   
   // Methods for you guys to implement! 
@@ -66,7 +71,7 @@ class Board
     }
     else
     {
-      return current[row][col];
+      return (current[row][col] != 0);
     }
   }
   
@@ -102,11 +107,11 @@ class Board
       for (int col = 0 ; col < size ; col ++)
       {
         int count = countLiveCellsAround(row, col);
-        if (current[row][col])
+        if (isAlive([row][col]))
         {
           if (count == 2 || count == 3)
           {
-            next[row][col] = true;
+            next[row][col] = current[row][col];
           }
           else
           {
@@ -117,7 +122,7 @@ class Board
         {
           if (count == 3)
           {
-            next[row][col] = true;
+            next[row][col] = AverageAround(row, col);
           }
           else
           {
@@ -127,11 +132,30 @@ class Board
       }
     }
     
-    boolean[][] temp;
+    
+    
+    color[][] temp;
     temp = current;
     current = next;
     next = temp;
     
+  }
+  
+  color AverageAround(int row, int col)
+  {
+    color average;
+    for(int r = row - 1 ; r <= row + 1 ; r ++)
+    {
+      for(int c = col - 1 ; c <= col + 1 ; c ++)
+      {
+        if (! (r == row && c == col) && isAlive(r, c))
+        {
+          average += current[row][col];
+        }
+      }
+    }
+    average /= 3;
+    return average;
   }
   
 }

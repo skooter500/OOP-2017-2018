@@ -36,6 +36,15 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
+# Week 9 - Introduction to YASC
+- [YASC Code](https://github.com/skooter500/YASC)
+- Download a build of YASC for Windows on Itch(https://skooter500.itch.io/yasc)
+- [Inheritance](https://processing.org/examples/inheritance.html)
+
+[![YouTube](http://img.youtube.com/vi/YjURgEJPbH4/0.jpg)](https://www.youtube.com/watch?v=YjURgEJPbH4)
+
+[![YouTube](http://img.youtube.com/vi/Yd1yHosYkhY/0.jpg)](https://www.youtube.com/watch?v=Yd1yHosYkhY)
+
 # Week 8 - Polymorphism
 - [Dog, Cats & Sheep example](processing/DogsCats1)
 
