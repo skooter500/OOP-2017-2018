@@ -38,7 +38,7 @@ Some assignments from previous years:
 
 # Week 9 - Introduction to YASC
 - [YASC Code](https://github.com/skooter500/YASC)
-- Download a build of YASC for Windows on Itch(https://skooter500.itch.io/yasc)
+- [Download a build of YASC for Windows on Itch](https://skooter500.itch.io/yasc)
 - [Inheritance](https://processing.org/examples/inheritance.html)
 
 [![YouTube](http://img.youtube.com/vi/YjURgEJPbH4/0.jpg)](https://www.youtube.com/watch?v=YjURgEJPbH4)
