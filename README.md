@@ -45,6 +45,9 @@ Some assignments from previous years:
 
 [![YouTube](http://img.youtube.com/vi/Yd1yHosYkhY/0.jpg)](https://www.youtube.com/watch?v=Yd1yHosYkhY)
 
+## Lab
+- [Lab Test 1](https://github.com/skooter500/OOP_Labtest1_2017_Starter)
+
 # Week 8 - Polymorphism
 - [Dog, Cats & Sheep example](processing/DogsCats1)
 
