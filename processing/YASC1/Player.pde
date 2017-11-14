@@ -15,12 +15,14 @@ class Player
     this.c = c;
     forward = new PVector(0, -1);
     rotSpeed = 0.1f;
-    this.speed = 1;
+    this.speed = 10;
     this.radius = radius; 
   }
   
   void update()
   {
+    forward.x = sin(theta);
+    forward.y = - cos(theta);
     if (checkKey('a'))
     {
       theta -= rotSpeed;
@@ -32,11 +34,11 @@ class Player
     
     if (checkKey('w'))
     {
-      pos.y -= speed;
+      pos.add(PVector.mult(forward, speed));
     }
     if (checkKey('s'))
     {
-      pos.y += speed;
+      pos.sub(PVector.mult(forward, speed));
     }   
   }
   
