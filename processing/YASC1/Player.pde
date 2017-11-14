@@ -40,10 +40,18 @@ class Player
     {
       pos.sub(PVector.mult(forward, speed));
     }   
+    
+    if (checkKey(' '))
+    {
+      PVector bp = PVector.add(pos, PVector.mult(forward, radius + 2));
+      Bullet b = new Bullet(bp.x, bp.y, theta, speed * 2);
+      bullets.add(b);
+    }
   }
   
   void render()
   {
+    pushMatrix();
     translate(pos.x, pos.y);
     rotate(theta);
     stroke(c);
@@ -51,5 +59,6 @@ class Player
     line(0 ,  - radius,  radius,  radius);
     line( radius,  radius, 0 , 0);
     line(0, 0,  - radius,  radius);  
+    popMatrix();
   }
 }
