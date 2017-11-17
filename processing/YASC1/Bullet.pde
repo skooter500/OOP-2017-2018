@@ -27,5 +27,11 @@ class Bullet
     forward.x = sin(theta);
     forward.y = - cos(theta);
     pos.add(PVector.mult(forward, speed));
+    
+    if (pos.x < 0 || pos.x > width || pos.y < 0 || pos.y > height)
+    {
+      bullets.remove(this);
+    }
+    
   }
 }

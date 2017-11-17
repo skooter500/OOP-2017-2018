@@ -13,11 +13,13 @@ ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 
 void keyPressed()
 {
+  println("Key pressed");
   keys[keyCode] = true;
 }
 
 void keyReleased()
 {
+  println("Key released");
   keys[keyCode] = false;
 }
 
@@ -35,9 +37,12 @@ void draw()
   p1.update();
   p1.render();
   
-  for(Bullet b:bullets)
+  for(int i = bullets.size() - 1 ; i >= 0  ; i --)
   {
+    Bullet b = bullets.get(i);
     b.update();
     b.render();
   }
+  
+  text("Bullets:" + bullets.size(), 10, 20);
 }
