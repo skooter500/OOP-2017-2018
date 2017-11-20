@@ -1,21 +1,15 @@
-class Player
+class Player extends GameObject
 {
-  float speed;
-  PVector pos;
-  PVector forward;
   color c;
-  float theta;
+  
   float radius;
   float rotSpeed;
   
   Player(float x, float y, float theta, color c, float radius)
   {
-    pos = new PVector(x, y);
-    this.theta = theta;
+    super(x, y, 10, theta);
     this.c = c;
-    forward = new PVector(0, -1);
     rotSpeed = 0.1f;
-    this.speed = 10;
     this.radius = radius; 
   }
   
@@ -44,8 +38,8 @@ class Player
     if (checkKey(' '))
     {
       PVector bp = PVector.add(pos, PVector.mult(forward, radius + 2));
-      Bullet b = new Bullet(bp.x, bp.y, theta, speed * 2);
-      bullets.add(b);
+      GameObject b = new Bullet(bp.x, bp.y, theta, speed * 2);
+      gameObjects.add(b);
     }
   }
   

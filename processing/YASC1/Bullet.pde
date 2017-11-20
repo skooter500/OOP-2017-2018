@@ -1,16 +1,8 @@
-class Bullet
+class Bullet extends GameObject
 {
-  PVector pos;
-  PVector forward;
-  float theta;
-  float speed;
-  
   Bullet(float x, float y, float theta, float speed)
   {
-    pos = new PVector(x, y);
-    forward = new PVector(0, -1);
-    this.theta = theta;
-    this.speed = speed;
+    super(x, y, speed, theta); 
   }
   
   void render()
@@ -30,7 +22,7 @@ class Bullet
     
     if (pos.x < 0 || pos.x > width || pos.y < 0 || pos.y > height)
     {
-      bullets.remove(this);
+      gameObjects.remove(this);
     }
     
   }
