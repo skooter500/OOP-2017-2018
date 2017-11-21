@@ -36,6 +36,51 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
+
+# Week 11 - Refactoring YASC to use inheritance & polymorphism
+- [Updated YASC code](processing/YASC1)
+
+## Lab
+### Learning Outcomes
+- Learn how to use PVectors
+- Learn how to implement realistic physics by implementing Newton's Laws of Motion
+
+Modify the code we worked on on the class on Monday so that the ship moves with realistic physics. You should use PVectors in your solution. The three equations you need to implement are:
+
+A = F / m
+
+V = V + A * t
+
+P = P + A * t
+
+Where A = Acceleration, V = Velocity, P = Position, t = time
+
+Force is measured in Newtons and is a vector quantity, so it has magnitude and direction. When you press the w and s keys, instead of moving the position vector, you should create force vector in the direction of the forward vector. To do this, take the forward vector and multiply by the newtons of force you want to apply. I used 100 Newtons of force in my solution.
+
+
+After you generate the force you need to write code to implement the 3 equations above.
+- Calculate the acceleration due to the force
+- Calculate the new velocity
+- Update the position based on the velocity and time.
+
+I added the following fields to the Player class to do this:
+
+- force, power, timeDelta, velocity and acceleration
+
+If you implement this correctly, your ship will accelerate and move realistically. If you want to implement friction, so that the ship slows down, a simple way to do this is to just multiply the velocity by 0.99f each frame. This removes 1% of the velocity. Here is what my sketch looks like:
+
+[![YouTube](http://img.youtube.com/vi/grz4niYV_bs/0.jpg)](https://www.youtube.com/watch?v=grz4niYV_bs)
+
+Some ideas to try:
+- Make the keys used to control the ship fields in the Player class, so you can instantiate several ships controlled with different keys
+- Have the player ship draw a trail
+- Implement gravity
+
+# Week 10 - Adding bullets to YASC
+
+## Lab
+- [Lab Test 1](https://github.com/skooter500/OOP_Labtest1_2017_Starter)
+
 # Week 9 - Introduction to YASC
 - [YASC Code](https://github.com/skooter500/YASC)
 - [Download a build of YASC for Windows on Itch](https://skooter500.itch.io/yasc)
@@ -45,8 +90,7 @@ Some assignments from previous years:
 
 [![YouTube](http://img.youtube.com/vi/Yd1yHosYkhY/0.jpg)](https://www.youtube.com/watch?v=Yd1yHosYkhY)
 
-## Lab
-- [Lab Test 1](https://github.com/skooter500/OOP_Labtest1_2017_Starter)
+
 
 # Week 8 - Polymorphism
 - [Dog, Cats & Sheep example](processing/DogsCats1)
