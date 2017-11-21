@@ -51,7 +51,7 @@ A = F / m
 
 V = V + A * t
 
-P = P + A * t
+P = P + V * t
 
 Where A = Acceleration, V = Velocity, P = Position, t = time
 
