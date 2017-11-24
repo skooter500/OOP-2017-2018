@@ -1,9 +1,12 @@
 void setup()
 {
-  size(500, 500);
-  gameObjects.add(
+  size(1000, 700);
+  /*gameObjects.add(
     new Player(width / 2, height / 2, 0, color(255, 255, 255), 50));
   gameObjects.add(new Player(50, 50, 0, color(0, 255, 0), 40));
+  */
+  
+  gameObjects.add(new PathFollower(width / 2, height / 2));
 }
 
 boolean keys[] = new boolean[1024];
