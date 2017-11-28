@@ -36,9 +36,26 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
-
-# Week 11 - Refactoring YASC to use inheritance & polymorphism
+# Week 12 - Interfaces
+- We made a Powerup interface and made an AmmoPowerup and a HealthPowerup implementation
 - [Updated YASC code](processing/YASC1)
+- [Interfaces in Processing](https://processing.org/reference/implements.html)
+
+## Lab
+
+Today you should check out the code we worked on in the class and you can make the following additions:
+
+- Make the keys used to control the player ships fields in the Player class and construct two instances that use different keys so that two players can play at the same time
+- Make the the powerups spawn offscreen and move onscreen. Currently they spawn at random positions
+- Remove the powerups when they go off screen
+- Make it possible for the bullets to collide with the player ships. A bullet collision should remove 1 health. You can do this by modifying the update method in the Player class
+- When the players health gets to 0, the other player should win the game.
+- You can make the bullets wrap around the screen and get removed after 5 seconds rather than get removed when they go offscreen
+
+# Week 11 - Refactoring YASC to use inheritance, polymorphism and abstract classes
+- [Updated YASC code](processing/YASC1)
+
+[![YouTube](http://img.youtube.com/vi/Yd1yHosYkhY/0.jpg)](https://www.youtube.com/watch?v=Yd1yHosYkhY)
 
 ## Lab
 ### Learning Outcomes
@@ -75,6 +92,9 @@ Some ideas to try:
 - Make the keys used to control the ship fields in the Player class, so you can instantiate several ships controlled with different keys
 - Have the player ship draw a trail
 - Implement gravity
+
+## Tutorial
+- We made a path following player ship
 
 # Week 10 - Adding bullets to YASC
 

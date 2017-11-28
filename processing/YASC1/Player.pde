@@ -12,6 +12,9 @@ class Player extends GameObject
   float mass;
   float power;
   
+  int ammo;
+  int health;
+  
   Player(float x, float y, float theta, color c, float radius)
   {
     super(x, y, 10, theta);
@@ -25,6 +28,8 @@ class Player extends GameObject
     mass = 1;
     timeDelta = 1 / 60f;
     power = 100;
+    ammo = 10;
+    health = 10;
   }
   
   void update()
@@ -70,12 +75,43 @@ class Player extends GameObject
     {
       pos.x = width;
     }
+    
+    if (pos.y < 0)
+    {
+      pos.y = height;
+    }
+    
+    if (pos.y > height)
+    {
+      pos.y = 0;
+    }
+    
+    checkCollisions();
+  }
+  
+  void checkCollisions()
+  {
+    for(int i = gameObjects.size() - 1 ; i >= 0  ; i --)
+    {
+      GameObject go = gameObjects.get(i);
+      if (go instanceof Powerup)
+      {
+        if (dist(this.pos.x, this.pos.y, go.pos.x, go.pos.y) < 40)
+        {
+          ((Powerup) go).applyTo(this);
+          gameObjects.remove(go);
+        }        
+      }
+    }
   }
   
   void render()
   {
     pushMatrix();
     translate(pos.x, pos.y);
+    stroke(0, 255, 255);
+    text("Health: " + health, 30, 0);
+    text("Ammo: " + ammo, 30, 20);
     rotate(theta);
     stroke(c);
     line(-radius,  radius, 0 ,  - radius);
