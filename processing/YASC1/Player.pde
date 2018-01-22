@@ -54,11 +54,12 @@ class Player extends GameObject
       force = PVector.mult(forward, -power);      
     }   
     
-    if (checkKey(' '))
+    if (checkKey(' ') && ammo > 0)
     {
       PVector bp = PVector.add(pos, PVector.mult(forward, radius + 2));
       GameObject b = new Bullet(bp.x, bp.y, theta, speed * 2);
       gameObjects.add(b);
+      ammo --;
     }
     
     acceleration = PVector.div(force, mass);

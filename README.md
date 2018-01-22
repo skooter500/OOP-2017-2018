@@ -36,6 +36,14 @@ Some assignments from previous years:
 - Assignment 3 - 15%
 - End of Year MCQ - 50%
 
+# Semester 2
+
+# Week 1 - Java
+- [The Java Tutorial](https://docs.oracle.com/javase/tutorial/)
+- Compiling and running your first Java program:
+	
+	[![YouTube](http://img.youtube.com/vi/WXftKFCtPrQ/0.jpg)](https://www.youtube.com/watch?v=WXftKFCtPrQ)
+
 # Week 12 - Interfaces
 - We made a Powerup interface and made an AmmoPowerup and a HealthPowerup implementation
 - [Updated YASC code](processing/YASC1)
