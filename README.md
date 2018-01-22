@@ -45,7 +45,7 @@ Some assignments from previous years:
 - Compiling and running your first Java program:
 	
 	[![YouTube](http://img.youtube.com/vi/WXftKFCtPrQ/0.jpg)](https://www.youtube.com/watch?v=WXftKFCtPrQ)
-- The [Matrix code](java/Matrix) we wrote in the class
+- The [Matrix code](java/) we wrote in the class
 - [GamesFleadh](http://gamesfleadh.ie)
 	
 # Semester 1	
