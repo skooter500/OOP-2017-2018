@@ -32,17 +32,23 @@ Some assignments from previous years:
 
 - 14 November 2017 Lab Test 10%
 - 12 December 2017 Assignment 1 submission 15%
-- 30 January 2018  Lab Test 2 - 10%
-- Assignment 3 - 15%
-- End of Year MCQ - 50%
+- 14 February 2018 Lab Test 2 - 10%
+- 5 February 2018 Team project proposal submission
+- 18 April 2018 - Team project demos - 15%
+- End of Year exam - 50%
 
 # Semester 2
 
 # Week 1 - Java
+- Study [this project](processing/YASC1) for examples of encapsulation, inheritance, polymorphism, interfaces and abstract classes
 - [The Java Tutorial](https://docs.oracle.com/javase/tutorial/)
 - Compiling and running your first Java program:
 	
 	[![YouTube](http://img.youtube.com/vi/WXftKFCtPrQ/0.jpg)](https://www.youtube.com/watch?v=WXftKFCtPrQ)
+- The [Matrix code](java/Matrix) we wrote in the class
+- [GamesFleadh](http://gamesfleadh.ie)
+	
+# Semester 1	
 
 # Week 12 - Interfaces
 - We made a Powerup interface and made an AmmoPowerup and a HealthPowerup implementation
