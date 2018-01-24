@@ -49,6 +49,7 @@ Some assignments from previous years:
 - [GamesFleadh](http://gamesfleadh.ie)
 
 # Lab
+## Learning Outcomes
 - Get practice writing and calling a static method on a class
 - Develop your computational thinking skills by implementing the matrix multiplication algorithm
 
@@ -82,7 +83,7 @@ java ie.dit.Main
 
 Open the file Matrix.java in Notepad++
 
-This class has two methods signatures for addition that allows us to perform the following operations:
+This class has two methods signatures for matrix addition that allows us to perform the following operations:
 
 - A+= B - This is the *non-static* method add that takes one parameter
 - A = B + C - This is the *static* method that takes two parameters.
@@ -94,28 +95,28 @@ Read [this article on static in Java](http://stackoverflow.com/questions/413898/
 - Put the following test code into your Main method:
 
 ```Java
-		Matrix a = new Matrix(4, 4);
-		a.identity();
-		a.setElement(2, 3, 7);
-		a.setElement(3, 1, 2);
-		a.setElement(3, 0, 4);
+Matrix a = new Matrix(4, 4);
+a.identity();
+a.setElement(2, 3, 7);
+a.setElement(3, 1, 2);
+a.setElement(3, 0, 4);
 
-		Matrix b = new Matrix(4, 4);
-		b.identity();
-		b.setElement(2, 3, 1);
-		b.setElement(3, 1, 9);
-		b.setElement(3, 0, -7);
-		
-		a.add(b); // Add b to a. This is like a+= b;
+Matrix b = new Matrix(4, 4);
+b.identity();
+b.setElement(2, 3, 1);
+b.setElement(3, 1, 9);
+b.setElement(3, 0, -7);
 
-		Matrix c;
-		// Add b to a, without changing a. Instead create a new matrix and return it
-		// This is like c = a + b
-		c = Matrix.add(a, b); // How to call a static method
+a.add(b); // Add b to a. This is like a+= b;
 
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println(c);	
+Matrix c;
+// Add b to a, without changing a. Instead create a new matrix and return it
+// This is like c = a + b
+c = Matrix.add(a, b); // How to call a static method
+
+System.out.println(a);
+System.out.println(b);
+System.out.println(c);	
 ```
 
 Your program should output the following:
@@ -145,10 +146,10 @@ You can add this code to the end of the main method:
 
 ```Java
 a.mult(b);
-		c = Matrix.mult(a, b);
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println(c);	
+c = Matrix.mult(a, b);
+System.out.println(a);
+System.out.println(b);
+System.out.println(c);	
 ```
 
 And now your program should print:
@@ -185,6 +186,12 @@ And now your program should print:
 -31.0   47.0    0.0     2.0
 ```
 
+You can commit your changes by typing:
+
+```
+git add .
+git commit -m "My changes"
+```
 	
 # Semester 1	
 
