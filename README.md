@@ -47,6 +47,144 @@ Some assignments from previous years:
 	[![YouTube](http://img.youtube.com/vi/WXftKFCtPrQ/0.jpg)](https://www.youtube.com/watch?v=WXftKFCtPrQ)
 - The [Matrix code](java/) we wrote in the class
 - [GamesFleadh](http://gamesfleadh.ie)
+
+# Lab
+- Get practice writing and calling a static method on a class
+- Develop your computational thinking skills by implementing the matrix multiplication algorithm
+
+Today we will be adding methods to the Matrix class to allow matrix addition, and (optionally) multiplication. 
+
+Clone the repository for the course by starting a bash shell and cd'ing to where you want to work and typing:
+
+```
+git clone https://github.com/skooter500/OOP-2017-2018
+```
+
+Create a branch for your work today:
+
+```
+cd OOP-2017-2018
+git checkout -b lab1
+```
+
+Compile the code we wrote on Monday:
+
+```
+cd java
+javac ie/dit/*.java
+```
+
+Run the code by typing:
+
+```
+java ie.dit.Main
+```
+
+Open the file Matrix.java in Notepad++
+
+This class has two methods signatures for addition that allows us to perform the following operations:
+
+- A+= B - This is the *non-static* method add that takes one parameter
+- A = B + C - This is the *static* method that takes two parameters.
+
+Read [this article on static in Java](http://stackoverflow.com/questions/413898/what-does-the-static-keyword-do-in-a-class) if you missed the class.
+
+- Write the implementation for a non-static method add(Matrix b) that adds the b parameter matrix to the *current* matrix.
+- Write the implementation for static method add(Matrix a, Matrix b) that adds the a and b matrices together and returns a *new* matrix. It currently returns null. Replace this!
+- Put the following test code into your Main method:
+
+```Java
+		Matrix a = new Matrix(4, 4);
+		a.identity();
+		a.setElement(2, 3, 7);
+		a.setElement(3, 1, 2);
+		a.setElement(3, 0, 4);
+
+		Matrix b = new Matrix(4, 4);
+		b.identity();
+		b.setElement(2, 3, 1);
+		b.setElement(3, 1, 9);
+		b.setElement(3, 0, -7);
+		
+		a.add(b); // Add b to a. This is like a+= b;
+
+		Matrix c;
+		// Add b to a, without changing a. Instead create a new matrix and return it
+		// This is like c = a + b
+		c = Matrix.add(a, b); // How to call a static method
+
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);	
+```
+
+Your program should output the following:
+
+```
+2.0     0.0     0.0     0.0
+0.0     2.0     0.0     0.0
+0.0     0.0     2.0     8.0
+-3.0    11.0    0.0     2.0
+
+1.0     0.0     0.0     0.0
+0.0     1.0     0.0     0.0
+0.0     0.0     1.0     1.0
+-7.0    9.0     0.0     1.0
+
+3.0     0.0     0.0     0.0
+0.0     3.0     0.0     0.0
+0.0     0.0     3.0     9.0
+-10.0   20.0    0.0     3.0
+```
+
+## Advanced!
+
+Read all about [matrix multiplication](http://www.mathsisfun.com/algebra/matrix-multiplying.html) and implement the static and non-static methods for multiplying two matrices together.
+
+You can add this code to the end of the main method:
+
+```Java
+a.mult(b);
+		c = Matrix.mult(a, b);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);	
+```
+
+And now your program should print:
+
+```
+2.0     0.0     0.0     0.0
+0.0     2.0     0.0     0.0
+0.0     0.0     2.0     8.0
+-3.0    11.0    0.0     2.0
+
+1.0     0.0     0.0     0.0
+0.0     1.0     0.0     0.0
+0.0     0.0     1.0     1.0
+-7.0    9.0     0.0     1.0
+
+3.0     0.0     0.0     0.0
+0.0     3.0     0.0     0.0
+0.0     0.0     3.0     9.0
+-10.0   20.0    0.0     3.0
+
+2.0     0.0     0.0     0.0
+0.0     2.0     0.0     0.0
+-56.0   72.0    2.0     10.0
+-17.0   29.0    0.0     2.0
+
+1.0     0.0     0.0     0.0
+0.0     1.0     0.0     0.0
+0.0     0.0     1.0     1.0
+-7.0    9.0     0.0     1.0
+
+2.0     0.0     0.0     0.0
+0.0     2.0     0.0     0.0
+-126.0  162.0   2.0     12.0
+-31.0   47.0    0.0     2.0
+```
+
 	
 # Semester 1	
 
