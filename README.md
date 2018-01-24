@@ -51,7 +51,7 @@ Some assignments from previous years:
 # Lab
 ## Learning Outcomes
 - Get practice writing and calling a static method on a class
-- Develop your computational thinking skills by implementing the matrix multiplication algorithm
+- Develop your computational thinking skills by implementing methods to do matrix addition and multiplication
 
 Today we will be adding methods to the Matrix class to allow matrix addition, and (optionally) multiplication. 
 
