@@ -1,5 +1,46 @@
 # Object Oriented Programming Assignments
 
+## Assignment 2
+
+This is your opportunity to really impress me by bringing together all the stuff you have learned this year into one final OOP assignment. You can make anything you like and you can work on a team of up to five people. You can also work alone if you prefer. Games Fleadh/Imagine Cup projects are all encouraged or indeed any other competitions. You can use any OOP language that you like (there are some constraints listed below) and I expect you to have to do self-directed learning on this project.    
+
+Rules:
+- You must use git to manage the source code on your project 
+- If you are on a team I expect to see git commits for each team member
+- You can use Processing, but this must be through Eclipse not the Processing IDE
+- You can use Unity3D, however if you decide to use Unity3D then you project should be mostly code, so consider using algorithms to procedurally generate content 
+
+Some ideas:
+- A music sequencer
+- A music visualiser
+- A music search engine
+- A fractal visualiser
+- An artificial life simulation
+- Steering behaviours (check out [this amazing free book for ideas](http://natureofcode.com/book/))
+- A robot controller, maybe using Lego Mindstorms/Arduino/Raspberry PI
+- A solar system simulator
+- A drawing program
+- A chat bot
+- Something using the Kinect or Leap Motion
+- A classifier
+- Something that analyses a dataset and draws some cool graphs 
+- A neural network that learns to recognise pictures
+- 3D Conways Game of Life
+- A game!
+- An app
+
+Marking Scheme:
+
+Complexity:30% Polish: 20% Learning 20% Project management: 10% Jazz 20% 
+
+| Grade | Description |
+| ------|-------------|
+| First | A project that looks great and is very polished. All the assets in the project are self made and all the code is self written. There a significant amount of complexity. The assignment has lots of functionality and is technically deep, with complex algorithms you had to develop. The code is organised into classes that use inheritance, polymorphism, abstract classes and interfaces appropriately. There is a lot of novelty and originality. A significant amount of learning and research outside the class is evident. You have entered a competition, published your assignment on an app store or otherwise disseminated your work outside the course. You will have used git extensively. Everything works. Your team held regular project meetings and each team member contributed equally to the project. Examples: A prize winning games fleadh game. A web project with lots of functionality, deployed to the cloud. A complex app submitted to Google play or the app store with lots of downloads and a back end. An IOT project such as a robot with a significant amount of Python code. Evidence of work throughout the semester |
+| 2.1 | The project looks good. You put in a good effort. Some features may not be complete or entirely working or the assignment is not too complex. Mostly based on stuff you learned in class or tutorials. Examples: A more simple Unity game based on tutorials with self created assets and some C# - a simple shooter or tower defence game. A Java/Swing app. A simple Android app with a few screens and a database. A processing/Eclipse shooter game. Evidence of work done in the month before submission |
+| 2.2 | The project looks so so, but is pretty basic. There might be significant issues that your team couldn't resolve. Not much use evidence of learning outside the class. There is not much code, maybe a page or two. Examples: A basic Android app like a calculator or a very simple Unity game based on Unity Tutorials. A simple Python web app. Evidence of about a weeks work |
+| Pass | All code in one file. Around a hundred lines of code. Looks like it could have been completed in < 1 day. Little or no functionality. Lots of code acquired from other sources or mostly code we used in the class. About a days work |
+| Fail | Something very basic that looks like it could have been completed in an hour. The assignment has no interactivity. Significant unaddressed technical problems. No git usage.  |
+
 ## Assignment 1 - Due Week 13
 
 Use Processing to create a UI for a sci-fi movie device like a warp drive, engines, weapons system. You can base it on any movie you like or come up with your own. It should be kinda usable. It should have lots of animation & interactivity and look amazing. It can be as far out as you like. In other words it can be for an alien. You sould use all the stuff you are learning on the course:
