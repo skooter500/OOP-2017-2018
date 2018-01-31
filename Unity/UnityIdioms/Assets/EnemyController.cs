@@ -15,8 +15,10 @@ public class EnemyController : MonoBehaviour {
 
     private void ExplodeMyParts()
     {
+        // Get all my component gameobjects
         foreach (Transform t in this.GetComponentsInChildren<Transform>())
         {
+            // If it doesnt have a rigidbody add one. Rigidbody's are used to implement physics
             Rigidbody rb = t.gameObject.GetComponent<Rigidbody>();
             if (rb == null)
             {
@@ -29,15 +31,21 @@ public class EnemyController : MonoBehaviour {
                 , Random.Range(5, 10)
                 , Random.Range(-5, 5)
                 );
+            // Give it a random velocity
             rb.velocity = v;
         }
+        // Call Sink after 4 seconds
         Invoke("Sink", 4);
+
+        // Destroy the gameobject after 5 seconds
         Destroy(this.gameObject, 7);
     }
 
     void Sink()
     {
+        // Disable the collider so it no longer collides with the ground. Gravity will cause it to sink
         GetComponent<Collider>().enabled = false;
+        // Changes how much drag the object has. Higher numbers make it sink slower
         GetComponent<Rigidbody>().drag = 1;
     }
 

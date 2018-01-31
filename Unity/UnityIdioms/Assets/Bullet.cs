@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
     public float speed = 10;
 	// Use this for initialization
 	void Start () {
+        // This means run the KillMe method after 5 seconds
         Invoke("KillMe", 5);
 	}
 
