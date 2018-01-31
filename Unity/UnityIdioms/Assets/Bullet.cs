@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-    public float speed = 100.0f;
+    public float speed = 10;
 	// Use this for initialization
 	void Start () {
         Invoke("KillMe", 5);
@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour {
 
     void KillMe()
     {
-        Destroy(this.gameObject);
+        GameObject.Destroy(this.gameObject);
     }
 	
 	// Update is called once per frame
