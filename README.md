@@ -44,18 +44,20 @@ Some assignments from previous years:
 
 Important Unity stuff to know (there are great tutorials online for all this stuff):
 
-The Unity editor
-Using Unity with Visual Studio
-GameObjects, GameComponents
-Vector3, Quaternions
-Transforms & parenting
-Exposing c# properties to Unity
-Start & Update methods
-Using tags
-Using the input manager
-Instianting GameObjects from prefabs
-Colliders & triggers
-Rigidbodies, forces & torque
+- The Unity editor
+- Using Unity with Visual Studio
+- GameObjects, GameComponents
+- Vector3, Quaternions
+- Transforms & parenting
+- Exposing c# properties to Unity
+- Start & Update methods
+- Using tags
+- Using the input manager
+- Instianting GameObjects from prefabs
+- Colliders & triggers
+- Rigidbodies, forces & torque
+
+[This Unity project](Unity/UnityIdioms) has examples of all of these.
 
 ## Lab
 ## Learning Outcomes
