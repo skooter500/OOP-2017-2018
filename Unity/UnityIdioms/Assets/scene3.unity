@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 291615732}
   - component: {fileID: 291615731}
   - component: {fileID: 291615735}
+  - component: {fileID: 291615736}
   m_Layer: 0
   m_Name: tank
   m_TagString: Untagged
@@ -282,7 +283,7 @@ Transform:
   - {fileID: 629395421}
   - {fileID: 603888148}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &291615735
 MonoBehaviour:
@@ -300,6 +301,17 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 603888147}
   bulletPrefab: {fileID: 1079649181240532, guid: fb6acae0100a18b44b3125d32da8edea,
     type: 2}
+--- !u!114 &291615736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 291615730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b435f1a8201fc140bd06ca5452b7850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &603888147
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +367,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291615734}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &970302801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 970302802}
+  m_Layer: 0
+  m_Name: physicsSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &970302802
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970302801}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 7.92, z: -21.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1221297981
 GameObject:
