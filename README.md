@@ -74,14 +74,15 @@ git checkout -b lab2
 
 Launch Unity and open the project that's part of the course repository in the folder OOP-2017-2018/Unity/UnityIdioms. There are three scenes in this project. You can switch scene in Unity by going File | Open Scene and navigating to the Assets folder that's part of the project hierarchy.
 
-scene1 is the player controlled tank with the 3rd person camera. This scene will also spawn enemy tanks that the player can shoot at
-sceen2 is the player controlled tank with a physicsSpawner object that has a script attached that makes a wall that the player tank can crash into or shoot
+scene1 is the player controlled tank with the 3rd person camera. This scene will also spawn enemy tanks that the player can shoot at.
 
-You can open the Visual Studio project associated with the Unity project by going to the Assets | Open C# Project and it will open Visual Studio so you can edit your code. Take a good read through the C# code associated with this project.
+sceen2 is the player controlled tank with a physicsSpawner object that has a script attached that makes a wall that the player tank can crash into or shoot at.
+
+You can open the Visual Studio project associated with the Unity project by going to the Assets | Open C# Project and it will open Visual Studio so you can edit your code. Take a good read through the C# code associated with this project and make sure and open each scene and run it to see what it does.
 
 You should open scene3 which just has a player controlled tank and a fixed camera. You control the tank by using wasd and space to shoot.
 
-The aim of today's lab is to create a second player controlled tank, controlled with the ijkl and enter keys for shooting. You can make it a different colour to the first player controlled tank and have it shoot differently coloured bullets. Try and get each tank to explode when it gets hit by the opponents bullets. You can have a look at the code in EnemyTanik.cs to se how I achieved this. 
+The aim of today's lab is to create a second player controlled tank, controlled with the ijkl and enter keys for shooting. You can make it a different colour to the first player controlled tank and have it shoot differently coloured bullets. Try and get each tank to explode when it gets hit by the opponents bullets. You can have a look at the code in EnemyTanik.cs to se how I achieved the explosion. 
 
 # Semester 2
 
