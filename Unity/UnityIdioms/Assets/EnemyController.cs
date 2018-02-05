@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
@@ -35,10 +35,10 @@ public class EnemyController : MonoBehaviour {
             rb.velocity = v;
         }
         // Call Sink after 4 seconds
-        Invoke("Sink", 4);
+        //Invoke("Sink", 8);
 
         // Destroy the gameobject after 5 seconds
-        Destroy(this.gameObject, 7);
+        //Destroy(this.gameObject, 10);
     }
 
     void Sink()
