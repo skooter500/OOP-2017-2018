@@ -61,11 +61,38 @@ public class Matrix
 	
 	public void add(Matrix m)
 	{
+		for(int row = 0 ; row < rows ; row ++)
+		{
+			for(int col = 0 ; col < cols ; col++)
+			{
+				this.elements[row][col] += m.elements[row][col];
+			}
+		}
 	}
 	
 	public static Matrix add(Matrix a, Matrix b)
 	{
-		return null;
+		Matrix m = new Matrix(a.rows, a.cols);
+
+		for(int row = 0 ; row < a.rows ; row ++)
+		{
+			for(int col = 0 ; col < a.cols ; col++)
+			{
+				m.elements[row][col] = a.elements[row][col] 
+					+ b.elements[row][col]; 
+			}
+		}
+		return m;
+	}
+
+	public void mult(Matrix x)
+	{
+
+	}
+
+	public static Matrix mult(Matrix a, Matrix b)
+	{
+
 	}
 	
 }
