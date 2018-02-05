@@ -16,12 +16,12 @@ public class Main
 		b.setElement(3, 1, 9);
 		b.setElement(3, 0, -7);
 
-		a.add(b); // Add b to a. This is like a+= b;
+		a.mult(b); // Add b to a. This is like a+= b;
 
 		Matrix c;
 		// Add b to a, without changing a. Instead create a new matrix and return it
 		// This is like c = a + b
-		c = Matrix.add(a, b); // How to call a static method
+		c = Matrix.mult(a, b); // How to call a static method
 
 		System.out.println(a);
 		System.out.println(b);
