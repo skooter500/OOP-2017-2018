@@ -85,14 +85,36 @@ public class Matrix
 		return m;
 	}
 
-	public void mult(Matrix x)
+	public void mult(Matrix a)
 	{
-
+		for(int row = 0; row < this.rows ; row ++)
+		{
+			for(int col = 0 ; col < a.cols ; col ++)
+			{
+				float sum = 0;
+				for(int i = 0 ; i < cols ; i ++)
+				{
+					sum += a.elements[row][i] * b.elements[i][col];
+				}
+				elements[row][col] = sum;
+			}
+		}
 	}
 
 	public static Matrix mult(Matrix a, Matrix b)
 	{
-
+		Matrix c = new Matrix(a.rows, b.cols);
+		for(int row = 0; row < a.rows ; row ++)
+		{
+			for(int col = 0 ; col < b.cols ; col ++)
+			{
+				for(int i = 0 ; i < a.cols ; i ++)
+				{
+					c.elements[row][col] += a.elements[row][i] * b.elements[i][col];
+				}
+			}
+		}
+		return c;
 	}
 	
 }
