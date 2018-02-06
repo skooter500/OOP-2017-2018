@@ -34,7 +34,7 @@ Some assignments from previous years:
 - 12 December 2017 Assignment 1 submission 15%
 - 14 February 2018 Lab Test 2 - 10%
 - 5 February 2018 Team project proposal submission
-- 18 April 2018 - Team project demos - 15%
+- 25 April 2018 - Team project demos - 15%
 - End of Year exam - 50%
 
 # Week 2 - Unity
