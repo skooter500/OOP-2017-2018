@@ -37,6 +37,14 @@ Some assignments from previous years:
 - 25 April 2018 - Team project demos - 15%
 - End of Year exam - 50%
 
+[Semester 2 Assignment Choice form](https://docs.google.com/forms/d/e/1FAIpQLSdf9Lfr2_vPN1I10efd-Jhe5kP4lg_PU0v6rVNBKDuBWBgeow/viewform)
+
+# Week 4 - File IO
+- [File IO in Java tutorial](https://docs.oracle.com/javase/tutorial/essential/io/)
+- [Javadocs](https://docs.oracle.com/javase/9/docs/api/overview-summary.html#JavaSE)
+- [Big file of English words](https://github.com/dwyl/english-words/blob/master/words.txt)
+- Clone the repo to get the code we worked on
+
 # Week 3 - Matrices & the Levenshtein Distance algorithm
 
 - [All about the Levenshtein Distance from my PhD thesis. This might be a bit complicated to read](https://github.com/skooter500/DT228-OOP-2015/blob/master/docs/EditDistance.pdf)
