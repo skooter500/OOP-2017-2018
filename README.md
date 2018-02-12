@@ -49,6 +49,7 @@ Some assignments from previous years:
 
 For the lab test, make sure you know:
 
+- How to create a git repository and make commits to it
 - How to compile and run Java programs from the command line
 - Java packages and the import statement
 - The main method
