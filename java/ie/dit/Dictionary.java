@@ -25,6 +25,8 @@ public class Dictionary
 
         return sb.toString();
 
+
+        // Or use a string
         /*
         String s = "";
         for(String word:words)
@@ -58,6 +60,8 @@ public class Dictionary
 
     public void loadDictionary()
     {
+
+        // Adapted from: https://docs.oracle.com/javase/tutorial/essential/io/charstreams.html
         BufferedReader inputStream = null;
 
         try {
