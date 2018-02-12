@@ -45,6 +45,23 @@ Some assignments from previous years:
 - [Big file of English words](https://github.com/dwyl/english-words/blob/master/words.txt)
 - Clone the repo to get the code we worked on
 
+## Lab Test
+
+For the lab test, make sure you know:
+
+- How to compile and run Java programs from the command line
+- Java packages and the import statement
+- The main method
+- How to make a class with a constructor, fields and accessor methods
+- How to implement and use an ArrayList
+- Inheritance
+- Polymorphism
+- Interfaces
+- Strings - substring, length, contains, equals, startsWith, endsWith
+- How to load a text file line by line using a BufferedReader.
+
+There are examples of all of the above in the [java folder](java) of the course
+
 # Week 3 - Matrices & the Levenshtein Distance algorithm
 
 - [All about the Levenshtein Distance from my PhD thesis. This might be a bit complicated to read](https://github.com/skooter500/DT228-OOP-2015/blob/master/docs/EditDistance.pdf)
