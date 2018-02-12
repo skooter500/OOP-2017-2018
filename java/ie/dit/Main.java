@@ -37,13 +37,61 @@ public class Main
 		sa = "Games Fleadh";
 		sb = "Imagine Cup";
 		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.MinimumEditDistance(sa, sb));
+	}
+
+	public void dictionary()
+	{
+		Dictionary d = new Dictionary();
+		System.out.println(d);
+
+		System.out.println(d.findClosest("bread"));
+		System.out.println(d.findClosest("militarry"));
+		
+	}
+	public void strings()
+	{
+		String s = "I love Star Trek";
+
+		System.out.println(s.length());
+		System.out.println(s.contains("love"));
+		System.out.println(s.contains("hate"));
+		System.out.println(s.startsWith("I love"));
+		System.out.println(s.endsWith("cats"));
+		System.out.println(s.equals("Hello"));
+		
+		String ss = s.substring(7);
+
+		System.out.println(ss);
+		// Incorrect way to compare strings
+		if (ss == "Star Trek")
+		{
+			System.out.println("Same");
+		}
+		else
+		{
+			System.out.println("Different");
+		}
+		// Correct way to compare strings
+		if (ss.equalsIgnoreCase("Star Trek"))
+		{
+			System.out.println("Same");
+		}
+		else
+		{
+			System.out.println("Different");
+		}
+
+		String star = ss.substring(0, 5);
+		System.out.println(star.toUpperCase());
 
 	}
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.matrixMultiplication();
-		main.editDistance();
+		//main.matrixMultiplication();
+		//main.editDistance();
+		//main.strings();
+		main.dictionary();
 	}
 }

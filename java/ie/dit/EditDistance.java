@@ -56,7 +56,7 @@ public class EditDistance
                 }
             }
         }
-        System.out.println(m);
+        //System.out.println(m);
         return (int) m.getElement(rows - 1, cols - 1);
     }
 
