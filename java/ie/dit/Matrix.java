@@ -2,29 +2,19 @@ package ie.dit;
 
 public class Matrix
 {
+	private float[][] elements;
+	
 	private int rows;
 	private int cols;
 	
-	private float[][] elements;
-	
-	// Accessor
 	public int getRows()
 	{
 		return rows;
 	}
+	
 	public int getCols()
 	{
 		return cols;
-	}
-	
-	public void setElement(int row, int col, float val)
-	{
-		elements[row][col] = val;
-	}
-	
-	public float getElement(int row, int col)
-	{
-		return elements[row][col];
 	}
 	
 	public Matrix(int rows, int cols)
@@ -34,87 +24,120 @@ public class Matrix
 		elements = new float[rows][cols];
 	}
 	
-	public void identity()
+	public void setElement(int row, int col, float value)
 	{
-		for(int row = 0 ; row < rows ; row ++)
+		elements[row][col] = value;
+	}
+	
+	public float getElement(int row, int col)
+	{
+		return elements[row][col];
+	}
+	
+	public void add(Matrix b)
+	{
+		for (int row = 0 ; row < rows ; row ++)
 		{
-			for(int col = 0 ; col < cols ; col ++)
+			for (int col = 0 ; col < cols ; col ++)
 			{
-				elements[row][col] = (row == col) ? 1 : 0;
+				elements[row][col] += b.elements[row][col];
+				
+				// This will also work!
+				//setElement(row, col, getElement(row, col) 
+				//		+ b.getElement(row, col));
 			}
 		}
 	}
+		
 	
-	public String toString()
-	{
-		String ret = "";
-		for(int row = 0 ; row < rows ; row ++)
-		{
-			for(int col = 0 ; col < cols ; col ++)
-			{
-				ret += elements[row][col] + "\t";
-			}
-			ret += "\n";
-		}
-		return ret;
-	}
-	
-	public void add(Matrix m)
-	{
-		for(int row = 0 ; row < rows ; row ++)
-		{
-			for(int col = 0 ; col < cols ; col++)
-			{
-				this.elements[row][col] += m.elements[row][col];
-			}
-		}
-	}
-	
+	// This method applies to the class Matrix
+	// Not an instance of the class
 	public static Matrix add(Matrix a, Matrix b)
 	{
-		Matrix m = new Matrix(a.rows, a.cols);
-
-		for(int row = 0 ; row < a.rows ; row ++)
+		Matrix ret = new Matrix(a.getRows(), a.getCols());
+		
+		for (int row = 0 ; row < a.rows; row ++)
 		{
-			for(int col = 0 ; col < a.cols ; col++)
+			for (int col = 0 ; col < a.cols ; col ++)
 			{
-				m.elements[row][col] = a.elements[row][col] 
-					+ b.elements[row][col]; 
+				ret.elements[row][col] = 
+					a.elements[row][col]
+					+ b.elements[row][col];
+					
 			}
-		}
-		return m;
+		}			
+		return ret;		
 	}
-
-	public void mult(Matrix a)
+	
+	
+	
+	public void identity()
 	{
-		for(int row = 0; row < this.rows ; row ++)
+		for(int row = 0 ; row < getRows() ; row ++)
 		{
-			for(int col = 0 ; col < a.cols ; col ++)
+			for (int col = 0 ; col < cols ; col ++)
 			{
-				float sum = 0;
-				for(int i = 0 ; i < cols ; i ++)
+				if (row == col)
 				{
-					sum += a.elements[row][i] * b.elements[i][col];
+					setElement(row, col, 1);
 				}
-				elements[row][col] = sum;
+				else
+				{
+					setElement(row, col, 0);
+				}									
 			}
 		}
 	}
-
+	
 	public static Matrix mult(Matrix a, Matrix b)
 	{
-		Matrix c = new Matrix(a.rows, b.cols);
-		for(int row = 0; row < a.rows ; row ++)
+		Matrix c = new Matrix(a.getRows(), b.getCols());
+
+		for (int row = 0; row < a.getRows(); row++)
 		{
-			for(int col = 0 ; col < b.cols ; col ++)
+			for (int col = 0; col < b.getCols(); col++)
 			{
-				for(int i = 0 ; i < a.cols ; i ++)
+				float sum = 0.0f;
+				for (int i = 0; i < a.getCols(); i++)
 				{
-					c.elements[row][col] += a.elements[row][i] * b.elements[i][col];
+					sum += a.getElement(row, i) * b.getElement(i, col);
 				}
+				c.setElement(row, col, sum);
 			}
 		}
 		return c;
 	}
 	
+	public void mult(Matrix b)
+	{
+		for (int row = 0; row < getRows(); row++)
+		{
+			for (int col = 0; col < b.getCols(); col++)
+			{
+				float sum = 0.0f;
+				for (int i = 0; i < getCols(); i++)
+				{
+					sum += getElement(row, i) * b.getElement(i, col);
+				}
+				setElement(row, col, sum);
+			}
+		}
+	}
+	
+	
+	public String toString()
+	{
+		StringBuffer sb = new StringBuffer();
+		
+		for (int row = 0 ; row < this.rows ; row ++)
+		{
+			for (int col = 0 ; col < this.cols ; col ++)
+			{
+				sb.append(elements[row][col]);
+				sb.append("\t");
+			}
+			sb.append("\n");
+		}
+		return sb.toString();
+	}
 }

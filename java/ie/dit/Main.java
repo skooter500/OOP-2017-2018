@@ -2,7 +2,7 @@ package ie.dit;
 
 public class Main
 {
-	public static void main(String[] args)
+	void matrixMultiplication()
 	{
 		Matrix a = new Matrix(4, 4);
 		a.identity();
@@ -25,7 +25,25 @@ public class Main
 
 		System.out.println(a);
 		System.out.println(b);
-		System.out.println(c);	
-		
+		System.out.println(c);
+	}
+
+	public void editDistance()
+	{
+		String sa = "I love DIT";
+		String sb = "I love Tunepal";
+		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.MinimumEditDistance(sa, sb));
+
+		sa = "Games Fleadh";
+		sb = "Imagine Cup";
+		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.MinimumEditDistance(sa, sb));
+
+	}
+
+	public static void main(String[] args)
+	{
+		Main main = new Main();
+		main.matrixMultiplication();
+		main.editDistance();
 	}
 }
