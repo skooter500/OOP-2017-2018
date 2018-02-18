@@ -1,5 +1,7 @@
 package ie.dit;
 
+import javax.swing.JFrame;
+
 public class Main
 {
 	void matrixMultiplication()
@@ -100,6 +102,13 @@ public class Main
 		Matrix combined = Matrix.mult(scale, trans);
 
 		System.out.println(combined.transform(v));
+	}
+
+	public void tuneFinder()
+	{
+		JFrame tf  = new TuneFinder();
+
+		tf.setVisible(true);
 
 	}
 
@@ -110,6 +119,10 @@ public class Main
 		//main.editDistance();
 		//main.strings();
 		//main.dictionary();
-		main.transform();
+		//main.transform();
+
+		main.tuneFinder();
 	}
+
+
 }
