@@ -48,6 +48,38 @@ public class Matrix
 			}
 		}
 	}
+
+	public static Matrix translation(float x, float y)
+	{
+		Matrix m = new Matrix(3, 3);
+		m.identity();
+		m.setElement(0, 2, x);
+		m.setElement(1, 2, y);
+		return m;
+	}
+
+	public static Matrix scaling(float sx, float sy)
+	{
+		Matrix m = new Matrix(3, 3);
+		m.identity();
+		m.setElement(0, 0, sx);
+		m.setElement(1, 1, sy);
+		return m;
+	}
+
+	public Vector transform(ie.dit.Vector v)
+	{
+		Matrix m = new Matrix(3, 1);
+		m.setElement(0, 0, v.x);
+		m.setElement(1, 0, v.y);
+		m.setElement(2, 0, 1);
+
+		Matrix out = Matrix.mult(this, m);
+		return new Vector(out.getElement(0, 0)
+			, out.getElement(1, 0));		
+	}
+
+	
 		
 	
 	// This method applies to the class Matrix

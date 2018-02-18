@@ -86,12 +86,30 @@ public class Main
 
 	}
 
+	public void transform()
+	{
+		Vector v = new Vector(5, 10);
+		Matrix trans = Matrix.translation(2, -11);
+
+		System.out.println(trans.transform(v));
+
+		Matrix scale = Matrix.scaling(2, 3);
+		
+		System.out.println(scale.transform(v));
+
+		Matrix combined = Matrix.mult(scale, trans);
+
+		System.out.println(combined.transform(v));
+
+	}
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
 		//main.matrixMultiplication();
 		//main.editDistance();
 		//main.strings();
-		main.dictionary();
+		//main.dictionary();
+		main.transform();
 	}
 }
