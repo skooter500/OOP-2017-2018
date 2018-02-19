@@ -67,7 +67,7 @@ public class Matrix
 		return m;
 	}
 
-	public Vector transform(ie.dit.Vector v)
+	public Vector transform(ie.dit.Vector v) throws MatrixException
 	{
 		Matrix m = new Matrix(3, 1);
 		m.setElement(0, 0, v.x);
@@ -121,8 +121,14 @@ public class Matrix
 		}
 	}
 	
-	public static Matrix mult(Matrix a, Matrix b)
+	public static Matrix mult(Matrix a, Matrix b) throws MatrixException
 	{
+		if (a.getCols() != b.getRows())
+		{
+			throw 
+				new MatrixException("Can't multiply these matrices");
+
+		}
 		Matrix c = new Matrix(a.getRows(), b.getCols());
 
 		for (int row = 0; row < a.getRows(); row++)

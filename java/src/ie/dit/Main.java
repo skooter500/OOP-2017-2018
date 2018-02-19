@@ -1,12 +1,14 @@
 package ie.dit;
 
+import java.io.IOException;
+
 import javax.swing.JFrame;
 
 public class Main
 {
 	void matrixMultiplication()
 	{
-		Matrix a = new Matrix(4, 4);
+		Matrix a = new Matrix(4, 5);
 		a.identity();
 		a.setElement(2, 3, 7);
 		a.setElement(3, 1, 2);
@@ -18,13 +20,25 @@ public class Main
 		b.setElement(3, 1, 9);
 		b.setElement(3, 0, -7);
 
-		a.mult(b); // Add b to a. This is like a+= b;
+		//a.mult(b); // Add b to a. This is like a+= b;
 
-		Matrix c;
+		Matrix c = null;
 		// Add b to a, without changing a. Instead create a new matrix and return it
 		// This is like c = a + b
-		c = Matrix.mult(a, b); // How to call a static method
 
+		try
+		{
+			c = Matrix.mult(a, b); // How to call a static method
+		}
+		catch(MatrixException e)
+		{
+			System.out.println(e);
+			e.printStackTrace();
+		}
+		finally
+		{
+			System.out.println("This always happens");
+		}
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(c);
@@ -90,18 +104,25 @@ public class Main
 
 	public void transform()
 	{
-		Vector v = new Vector(5, 10);
-		Matrix trans = Matrix.translation(2, -11);
+		try
+		{
+			Vector v = new Vector(5, 10);
+			Matrix trans = Matrix.translation(2, -11);
 
-		System.out.println(trans.transform(v));
+			System.out.println(trans.transform(v));
 
-		Matrix scale = Matrix.scaling(2, 3);
-		
-		System.out.println(scale.transform(v));
+			Matrix scale = Matrix.scaling(2, 3);
+			
+			System.out.println(scale.transform(v));
 
-		Matrix combined = Matrix.mult(scale, trans);
+			Matrix combined = Matrix.mult(scale, trans);
 
-		System.out.println(combined.transform(v));
+			System.out.println(combined.transform(v));
+		}
+		catch(MatrixException e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	public void tuneFinder()
@@ -121,7 +142,8 @@ public class Main
 		//main.dictionary();
 		//main.transform();
 
-		main.tuneFinder();
+		main.matrixMultiplication();
+		//main.tuneFinder();
 	}
 
 
