@@ -10,7 +10,7 @@ public class TuneFinder extends JFrame
 
     int w = 500, h = 500;
 
-    String fileName = "scale.mp3";
+    String fileName = "audio/scale.wav";
 
     AudioInputStream audioInputStream;
 

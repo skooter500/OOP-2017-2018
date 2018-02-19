@@ -39,6 +39,10 @@ Some assignments from previous years:
 
 [Semester 2 Assignment Choice form](https://docs.google.com/forms/d/e/1FAIpQLSdf9Lfr2_vPN1I10efd-Jhe5kP4lg_PU0v6rVNBKDuBWBgeow/viewform)
 
+# Week 5 - Exceptions
+- [Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/summary.html)
+- [Solution to the lab test](https://github.com/skooter500/OOP-2018-Lab-Test-2)
+
 # Week 4 - File IO
 - [File IO in Java tutorial](https://docs.oracle.com/javase/tutorial/essential/io/)
 - [Javadocs](https://docs.oracle.com/javase/9/docs/api/overview-summary.html#JavaSE)
