@@ -142,8 +142,8 @@ public class Main
 		//main.dictionary();
 		//main.transform();
 
-		main.matrixMultiplication();
-		//main.tuneFinder();
+		//main.matrixMultiplication();
+		main.tuneFinder();
 	}
 
 

@@ -10,7 +10,7 @@ public class TuneFinder extends JFrame
 
     int w = 500, h = 500;
 
-    String fileName = "audio/scale.wav";
+    String fileName = "../audio/scale.wav";
 
     AudioInputStream audioInputStream;
 
@@ -24,10 +24,15 @@ public class TuneFinder extends JFrame
     int sampleRate;
     int numSamples;
 
-    private void loadSignal()
+    private void loadSignal() throws UnsupportedAudioFileException, IOException, LineUnavailableException
     {
         audioInputStream = null;
-        audioInputStream = AudioSystem.getAudioInputStream(new File(fileName));            
+        audioInputStream = AudioSystem.getAudioInputStream(new File(fileName));     
+        
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInputStream);
+        clip.start(); 
+        
         AudioFormat	format = audioInputStream.getFormat();
         numSamples = (int) audioInputStream.getFrameLength();
         log("Length of the stream in samples: " + numSamples);            
@@ -48,14 +53,31 @@ public class TuneFinder extends JFrame
     public TuneFinder()
     {
         super();
+        setSize(500, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        loadSignal();
+
+        try
+        {
+            loadSignal();
+        }
+        catch (UnsupportedAudioFileException e)
+        {
+            e.printStackTrace();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch(LineUnavailableException e)
+        {
+            e.printStackTrace();
+        }
     }
     public void paint(Graphics g) 
     {               
         super.paint(g);
 
-        setSize(500, 500);
+        
 
         g.setColor(Color.black);        
         g.fillRect(0, 0, w, h);
