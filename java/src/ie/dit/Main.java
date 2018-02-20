@@ -139,11 +139,11 @@ public class Main
 		//main.matrixMultiplication();
 		//main.editDistance();
 		//main.strings();
-		//main.dictionary();
+		main.dictionary();
 		//main.transform();
 
 		//main.matrixMultiplication();
-		main.tuneFinder();
+		//main.tuneFinder();
 	}
 
 

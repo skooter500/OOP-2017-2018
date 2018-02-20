@@ -43,6 +43,71 @@ Some assignments from previous years:
 - [Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/summary.html)
 - [Solution to the lab test](https://github.com/skooter500/OOP-2018-Lab-Test-2)
 
+## Lab
+
+# Week 5
+- [Exceptions in Java](http://docs.oracle.com/javase/tutorial/essential/exceptions/)
+- [Code for the class](java/SpellChecker)
+
+# Lab
+- Learn how to sort an ArrayList using the Collections framework
+- Learn how to implement an interface from the JDK
+- Get practice constructing an algorithm
+
+In this lab we will implement the ability to print the top 10 closest words from the dictionary instead of just printing the closest match. Here is what the output of the final program might look like:
+
+
+```
+$ java ie.dit.Main
+Enter a word or quit:
+hello
+Did you mean:
+bell
+help
+hollow
+jelly
+well
+yellow
+all
+ball
+fall
+full
+Enter a word or quit:
+milk
+Correct match
+Enter a word or quit:
+moon
+Correct match
+Enter a word or quit:
+yellow
+Correct match
+Enter a word or quit:
+bryan
+Did you mean:
+bread
+brown
+bad
+bag
+band
+basin
+boat
+boy
+brake
+branch
+Enter a word or quit:
+quit
+
+```
+
+To complete this lab:
+
+- Clone the repo to get the program we worked on in the class and study it carefully.
+- [Read this article that explains how you can sort an ArrayList](http://beginnersbook.com/2013/12/java-arraylist-of-object-sort-example-comparable-and-comparator/). If you need to, read it several times!
+- You will notice there is an unimplemented method ```public String[] findClosest(String toFind, int howMany)``` in the class Dictionary. At the moment it just returns null, but you should implement this method.
+- Modify the Main method to call the new method you wrote that returns a String array instead of the method that returns a String. Make whatever other changes are necessary.
+- I strongly suggest you take the time to think about how you would do this. If you can't figure it out, here are [step by step instructions](https://github.com/skooter500/DT228-OOP-2015/blob/master/instructions.md). Only use these if you can't figure it out
+
+
 # Week 4 - File IO
 - [File IO in Java tutorial](https://docs.oracle.com/javase/tutorial/essential/io/)
 - [Javadocs](https://docs.oracle.com/javase/9/docs/api/overview-summary.html#JavaSE)

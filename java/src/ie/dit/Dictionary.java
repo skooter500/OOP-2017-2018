@@ -38,6 +38,11 @@ public class Dictionary
         */
     }
 
+    public String[] findClosest(String toFind, int howMany)
+    {
+        return null;
+    }
+
     public String findClosest(String word)
     {
         int closestEd = Integer.MAX_VALUE;
