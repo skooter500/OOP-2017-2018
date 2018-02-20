@@ -43,12 +43,6 @@ Some assignments from previous years:
 - [Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/summary.html)
 - [Solution to the lab test](https://github.com/skooter500/OOP-2018-Lab-Test-2)
 
-## Lab
-
-# Week 5
-- [Exceptions in Java](http://docs.oracle.com/javase/tutorial/essential/exceptions/)
-- [Code for the class](java/SpellChecker)
-
 # Lab
 - Learn how to sort an ArrayList using the Collections framework
 - Learn how to implement an interface from the JDK
@@ -101,12 +95,27 @@ quit
 
 To complete this lab:
 
-- Clone the repo to get the program we worked on in the class and study it carefully.
+- Clone the repo to get the program we worked on in the class and study it carefully. You will be modifying the dictionary method in Main.java
 - [Read this article that explains how you can sort an ArrayList](http://beginnersbook.com/2013/12/java-arraylist-of-object-sort-example-comparable-and-comparator/). If you need to, read it several times!
 - You will notice there is an unimplemented method ```public String[] findClosest(String toFind, int howMany)``` in the class Dictionary. At the moment it just returns null, but you should implement this method.
 - Modify the Main method to call the new method you wrote that returns a String array instead of the method that returns a String. Make whatever other changes are necessary.
 - I strongly suggest you take the time to think about how you would do this. If you can't figure it out, here are [step by step instructions](https://github.com/skooter500/DT228-OOP-2015/blob/master/instructions.md). Only use these if you can't figure it out
 
+Also! The source code we are working on is now in the src folder and the class files are in a folder called bin. That will make it easier to import the project into Eclipse next week.
+
+To compile code, start a bash shell from the java folder and type:
+
+```
+javac -d bin src/ie/dit/*.java
+```
+
+The -d flag is used to specify the output directory
+
+To run code in the bin folder type:
+
+```
+java -classpath bin ie.dit.Main
+```
 
 # Week 4 - File IO
 - [File IO in Java tutorial](https://docs.oracle.com/javase/tutorial/essential/io/)
