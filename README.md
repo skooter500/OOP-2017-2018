@@ -44,6 +44,7 @@ Some assignments from previous years:
 - [Solution to the lab test](https://github.com/skooter500/OOP-2018-Lab-Test-2)
 
 # Lab
+## Learning Outcomes
 - Learn how to sort an ArrayList using the Collections framework
 - Learn how to implement an interface from the JDK
 - Get practice constructing an algorithm
