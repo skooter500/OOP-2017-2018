@@ -1,6 +1,7 @@
 package ie.dit;
 
 import java.io.IOException;
+import java.io.StringBufferInputStream;
 
 import javax.swing.JFrame;
 
@@ -58,10 +59,16 @@ public class Main
 	public void dictionary()
 	{
 		Dictionary d = new Dictionary();
-		System.out.println(d);
+		//System.out.println(d);
 
-		System.out.println(d.findClosest("bread"));
-		System.out.println(d.findClosest("militarry"));
+		//System.out.println(d.findClosest("bread"));
+		//System.out.println(d.findClosest("militarry"));
+
+		String[] words = d.findClosest("helo", 10);
+		for(int i = 0 ; i < words.length ; i ++)
+		{
+			System.out.println(words[i]);
+		}
 		
 	}
 	public void strings()

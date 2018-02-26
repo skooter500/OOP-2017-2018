@@ -3,6 +3,7 @@ package ie.dit;
 import java.io.IOException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.io.BufferedReader;
 
 
@@ -40,7 +41,21 @@ public class Dictionary
 
     public String[] findClosest(String toFind, int howMany)
     {
-        return null;
+        ArrayList<Match> matches = new ArrayList<Match>();
+        for(String w:words)
+        {
+            int ed = EditDistance.MinimumEditDistance(
+                toFind
+                , w);
+            matches.add(new Match(w, ed));
+        }
+        Collections.sort(matches);
+        String[] ret = new String[howMany];
+        for(int i = 0 ; i < howMany ; i ++)
+        {
+            ret[i] = matches.get(i).getWord();
+        }
+        return ret;
     }
 
     public String findClosest(String word)
@@ -70,7 +85,7 @@ public class Dictionary
         BufferedReader inputStream = null;
 
         try {
-            inputStream = new BufferedReader(new FileReader("words.txt"));
+            inputStream = new BufferedReader(new FileReader("words1.txt"));
             
             String l;
             while ((l = inputStream.readLine()) != null) {
