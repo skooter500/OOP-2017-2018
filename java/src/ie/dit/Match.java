@@ -23,7 +23,13 @@ public class Match implements Comparable<Match>
 
     public int compareTo(Match other)
     {
-        return this.ed - other.ed;
+        System.out.println("Comparing: " + this + " with " + other);
+        return other.ed - this.ed;
+    }
+
+    public String toString()
+    {
+        return word + ", " + ed;
     }
 
 

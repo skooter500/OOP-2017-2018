@@ -130,6 +130,10 @@ public class Main
 		{
 			e.printStackTrace();
 		}
+		finally
+		{
+
+		}
 	}
 
 	public void tuneFinder()
@@ -137,6 +141,7 @@ public class Main
 		JFrame tf  = new TuneFinder();
 
 		tf.setVisible(true);
+		tf.setSize(500, 500);
 
 	}
 
@@ -146,11 +151,11 @@ public class Main
 		//main.matrixMultiplication();
 		//main.editDistance();
 		//main.strings();
-		main.dictionary();
+		//main.dictionary();
 		//main.transform();
 
 		//main.matrixMultiplication();
-		//main.tuneFinder();
+		main.tuneFinder();
 	}
 
 

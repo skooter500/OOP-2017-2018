@@ -24,14 +24,16 @@ public class TuneFinder extends JFrame
     int sampleRate;
     int numSamples;
 
+    float min = 0, max = 0;
+
     private void loadSignal() throws UnsupportedAudioFileException, IOException, LineUnavailableException
     {
         audioInputStream = null;
         audioInputStream = AudioSystem.getAudioInputStream(new File(fileName));     
         
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioInputStream);
-        clip.start(); 
+        //Clip clip = AudioSystem.getClip();
+        //clip.open(audioInputStream);
+        //clip.start(); 
         
         AudioFormat	format = audioInputStream.getFormat();
         numSamples = (int) audioInputStream.getFrameLength();
@@ -46,7 +48,16 @@ public class TuneFinder extends JFrame
         boolean bigEndian = format.isBigEndian();                                 
         for (int signalIndex = 0 ; signalIndex < numSamples; signalIndex ++)
         {
-            signal[signalIndex] = ((audioData[(signalIndex * 2) + 1] << 8) + audioData[signalIndex * 2]);
+            signal[signalIndex] = ((audioData[(signalIndex * 2) + 1] << 8) + audioData[signalIndex * 2]);            
+            //System.out.println(signal[signalIndex]);
+            if (signal[signalIndex] < min)
+            {
+                min = signal[signalIndex];
+            }
+            if (signal[signalIndex] > max)
+            {
+                max = signal[signalIndex];
+            }            
         }
     }
 
@@ -82,7 +93,10 @@ public class TuneFinder extends JFrame
         g.setColor(Color.black);        
         g.fillRect(0, 0, w, h);
         g.setColor(Color.white);
-        g.drawLine(10, 10, 100, 100);
+        for(int i = 0 ; i < 500 ; i ++)
+        {
+            g.drawLine(i, 250, i, (int) (250 + (signal[i])));
+        }
         /*
         Graphics2D g2 = (Graphics2D) g;           
         Dimension bounds = parent.getGraphPanel().getSize(); 
