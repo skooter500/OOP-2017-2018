@@ -29,7 +29,7 @@ public class Main
 
 		try
 		{
-			c = Matrix.mult(a, b); // How to call a static method
+			c = Matrix.add(a, b); // How to call a static method
 		}
 		catch(MatrixException e)
 		{
@@ -54,6 +54,13 @@ public class Main
 		sa = "Games Fleadh";
 		sb = "Imagine Cup";
 		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.MinimumEditDistance(sa, sb));
+
+		sa = "AAB";
+		sb = "ABC";
+		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.MinimumEditDistance(sa, sb));
+
+
+
 	}
 
 	public void dictionary()
@@ -149,7 +156,7 @@ public class Main
 	{
 		Main main = new Main();
 		//main.matrixMultiplication();
-		//main.editDistance();
+		main.editDistance();
 		//main.strings();
 		//main.dictionary();
 		//main.transform();

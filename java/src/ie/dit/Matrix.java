@@ -84,8 +84,12 @@ public class Matrix
 	
 	// This method applies to the class Matrix
 	// Not an instance of the class
-	public static Matrix add(Matrix a, Matrix b)
+	public static Matrix add(Matrix a, Matrix b) throws MatrixException
 	{
+		if (a.rows != b.rows || a.cols != b.cols)
+		{
+			throw new MatrixException("Cannot add these matrices");
+		}
 		Matrix ret = new Matrix(a.getRows(), a.getCols());
 		
 		for (int row = 0 ; row < a.rows; row ++)
