@@ -156,7 +156,7 @@ public class Main
 	{
 		Main main = new Main();
 		//main.matrixMultiplication();
-		main.editDistance();
+		//main.editDistance();
 		//main.strings();
 		//main.dictionary();
 		//main.transform();

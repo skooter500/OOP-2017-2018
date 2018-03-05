@@ -84,12 +84,20 @@ public class TuneFinder extends JFrame
             e.printStackTrace();
         }
     }
+    
+    float map(float a, float b, float c, float d, float e)
+    {
+      float range1 = c - b;
+      float howFar1 = (a-b) / range1; 
+      float range2 = e - d;
+      float howFar2 = d + howFar1 * range2;
+      return howFar2;
+    }
+    
     public void paint(Graphics g) 
     {               
         super.paint(g);
-
-        
-
+      
         g.setColor(Color.black);        
         g.fillRect(0, 0, w, h);
         g.setColor(Color.white);
