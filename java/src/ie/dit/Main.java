@@ -148,8 +148,13 @@ public class Main
 		JFrame tf  = new TuneFinder();
 
 		tf.setVisible(true);
-		tf.setSize(500, 500);
+		tf.setSize(1000, 500);
 
+	}
+	public void tuneFinder1()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new TuneFinder1());
 	}
 
 	public static void main(String[] args)
@@ -162,7 +167,7 @@ public class Main
 		//main.transform();
 
 		//main.matrixMultiplication();
-		main.tuneFinder();
+		main.tuneFinder1();
 	}
 
 

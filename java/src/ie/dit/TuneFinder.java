@@ -8,9 +8,9 @@ import java.io.*;
 public class TuneFinder extends JFrame
 {
 
-    int w = 500, h = 500;
+    int w = 1000, h = 500;
 
-    String fileName = "../audio/scale.wav";
+    String fileName = "../audio/A.wav";
 
     AudioInputStream audioInputStream;
 
@@ -25,6 +25,19 @@ public class TuneFinder extends JFrame
     int numSamples;
 
     float min = 0, max = 0;
+    
+    int countZeroCrossings(float[] signal)
+    {
+    	int zc = 0;
+    	for(int i = 1 ; i < signal.length ; i ++)
+    	{
+    		if (signal[i - 1] > 0 && signal[i] <= 0)
+    		{
+    			zc ++;
+    		}
+    	}
+    	return zc;
+    }
 
     private void loadSignal() throws UnsupportedAudioFileException, IOException, LineUnavailableException
     {
@@ -101,10 +114,17 @@ public class TuneFinder extends JFrame
         g.setColor(Color.black);        
         g.fillRect(0, 0, w, h);
         g.setColor(Color.white);
-        for(int i = 0 ; i < 500 ; i ++)
+        
+        for(int i = 0 ; i < w ; i ++)
         {
-            g.drawLine(i, 250, i, (int) (250 + (signal[i])));
+        	int signalIndex = (int) map(i, 0, w, 0, numSamples);
+        	float val = signal[signalIndex];        	
+            g.drawLine(i, 250, i, (int) map(val, min, max, h, 0));
         }
+        
+        int zc = countZeroCrossings(signal);
+        float freq = zc * (sampleRate / (float) signal.length);
+        System.out.println("Freq: " + freq);
         /*
         Graphics2D g2 = (Graphics2D) g;           
         Dimension bounds = parent.getGraphPanel().getSize(); 
