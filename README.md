@@ -39,6 +39,78 @@ Some assignments from previous years:
 
 [Semester 2 Assignment Choice form](https://docs.google.com/forms/d/e/1FAIpQLSdf9Lfr2_vPN1I10efd-Jhe5kP4lg_PU0v6rVNBKDuBWBgeow/viewform)
 
+# Week 7 - Digital audio & Using Eclipse
+- [Digital audio](https://en.wikipedia.org/wiki/Digital_audio)
+- [Zero crossings algorithm](https://en.wikipedia.org/wiki/Zero_crossing)
+
+## Lab 7
+
+You an use either Eclipse or the JDK to complete today's lab. I rewote the code we worked on for the past couple of weeks using the Processing and Minim libraries instead of using the Java native libraries as the code is much cleaner and easier to understand. To get the code, clone/pull the repo for the course. 
+
+If you want to try and use Eclipse, you can start Eclipse from the desktop of the lab computers and choose the option File | Open projects from File System and navigate to the Java folder in the repo you just cloned. *Do not choose the root of the repository - make sure you choose the Java folder instead!*. That should import all the code we worked on this semester into an Eclipse project. If you find the Package Explorer Window right click on Main and choose Debug As | Java Application you will get a black rectangular window popping up. For subsequent launches, you can click on the little bug symbol on the toolbar to launch the application.
+
+If you want to use the JDK command line tools you can try:
+
+```
+javac -classpath "./;./lib/minim.jar;./lib/core.jar" -d bin src/ie/dit/*.java
+java -classpath "./bin;./lib/minim.jar;./lib/core.jar;./lib/jsminim.jar;./lib/mp3spi1.9.5.jar;./lib/tritonus_share.jar;./lib/tritonus_aos.jar;./lib/jl1.0.1.jar" ie.dit.Main
+```
+
+I recommend you copy and paste these commands! You can copy these using Ctrl + C and paste into the Windows command line using Shift + Insert. If you are on the Mac or Linux, you will need to replace the ; with :
+
+The -classpath option is adding jar files (the compiled and zipped Processing libraries) to the build and Java runtime of the program. Now the java runtime will be able to find the Processing libraries.
+
+Hit the spacebar and the program will stream an audio file and show you the waveform of the audio being played along with the output of the zero crossings algorithm. This should be around 880Hz - the frequency of the note A played on a tinwhistle:
+
+![Sketch](images/p24.png)
+
+If you look at the code you will discover this code:
+
+```Java
+String[] a = {"MAIN"};
+processing.core.PApplet.runSketch( a, new TuneFinder1());
+```
+
+This is "boilerplate" code required to run a Java/Processing sketch. All the code we are interested in is located in the setup and draw methods on the class TuneFinder1. I recommend you study that code carefully and see how it maps onto the code we wrote in Monday and last week. Now instead of accessing the signal array, we can access the signal via the audioInput object. ```audioInput.bufferSize()``` gives the size of the audio buffer and ```audioInput.left.get(i)``` gives the signal array at position i. You can see this code:
+
+```Java
+for (int i = 1; i < audioInput.bufferSize(); i++) {
+			line(i, mid, i, mid + audioInput.left.get(i) * mid);
+			average += Math.abs(audioInput.left.get(i));
+
+			if (audioInput.left.get(i - 1) > 0 && audioInput.left.get(i) <= 0) {
+				count++;
+			}
+
+		}
+		average /= audioInput.bufferSize();
+```
+Is drawing the waveform, calculating the average amplitude of the signal and also calculating the number of zero crossings.
+
+This code:
+
+```Java
+float frequency = count * (SAMPLE_RATE / FRAME_SIZE);
+```
+
+is calculating the frequency of the note in the audio file. If you have speakers or headphones plugged into the computer, you will hear the audio being played.
+
+Your task today is to convert this frequency value to a music note value. This is called "spelling" the note. Music notes are designated the letters ABCDEFG. In the ABC language (remember the lab test?), notes can be upper case characters, lower case characters and also have ' and , symbols. Here is code that gives music notes in ABC for the D Major scale with their corresponding frequencies. For any musicians in the class, you will know that D Major has 2 sharps. F# and C#, so the frequencies for the notes F and C are those for F# and C#:
+
+float[] frequencies = {293.66f, 329.63f, 369.99f, 392.00f, 440.00f, 493.88f, 554.37f, 587.33f
+			, 659.25f, 739.99f, 783.99f, 880.00f, 987.77f, 1108.73f, 1174.66f};
+	String[] spellings = {"D,", "E,", "F,", "G,", "A,", "B,", "C", "D", "E", "F", "G", "A", "B","c", "d", "e", "f", "g", "a", "b", "c'", "d'", "e'", "f'", "g'", "a'", "b'", "c''", "d''"};
+
+-  Write a class called PitchSpeller that has the above arrays as fields. It should have a method ```public String spell(float frequency)``` that takes a frequency as a parameter and returns the closest note to the frequency.
+- Call the method passing in the calculated frequency and print the result to the screen (which should be "a")
+- There is another audio file D.wav. See if your algorithm can identify the note in that file as the note d.
+
+# Week 6 - Digital audio
+- Have a look the TuneFinder class
+
+## Lab
+- No lab due to the snow
+
 # Week 5 - Exceptions
 - [Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/summary.html)
 - [Solution to the lab test](https://github.com/skooter500/OOP-2018-Lab-Test-2)
