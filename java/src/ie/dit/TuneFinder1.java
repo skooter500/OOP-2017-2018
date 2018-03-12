@@ -15,6 +15,8 @@ public class TuneFinder1 extends PApplet {
 	static final int FRAME_SIZE = 2048;
 	static final int SAMPLE_RATE = 44100;
 	
+	FFT fft;
+	
 	public void settings()
 	{
 		size(FRAME_SIZE, 500);
@@ -22,7 +24,8 @@ public class TuneFinder1 extends PApplet {
 
 	public void setup() {
 		minim = new Minim(this);
-		audioInput = minim.loadSample("../audio/A.wav", FRAME_SIZE);
+		fft = new FFT(FRAME_SIZE, SAMPLE_RATE);
+		audioInput = minim.loadSample("../audio/scale.wav", FRAME_SIZE);
 	}
 
 	public void draw() {
@@ -37,8 +40,27 @@ public class TuneFinder1 extends PApplet {
 		float mid = height / 2.0f;
 		float average = 0;
 		int count = 0;
+		colorMode(HSB);
+		fft.window(FFT.HAMMING);
+		fft.forward(audioInput.left);
+		int highestIndex = -1;
+		for(int i = 0 ; i < fft.specSize() ; i ++)
+		{
+			stroke(
+					map(i, 0, audioInput.bufferSize(), 0, 255)
+					, 255
+					, 255);
+			line(i, 0, i, fft.getBand(i) * mid);
+		}
+		
+		float freq = fft.indexToFreq(highestIndex);
+		
 		for (int i = 1; i < audioInput.bufferSize(); i++) {
-			line(i, mid, i, mid + audioInput.left.get(i) * mid);
+			stroke(
+					map(i, 0, audioInput.bufferSize(), 0, 255)
+					, 255
+					, 255);
+			//line(i, mid, i, mid + audioInput.left.get(i) * mid);
 			average += Math.abs(audioInput.left.get(i));
 
 			if (audioInput.left.get(i - 1) > 0 && audioInput.left.get(i) <= 0) {
@@ -47,15 +69,14 @@ public class TuneFinder1 extends PApplet {
 
 		}
 		average /= audioInput.bufferSize();
-
+		fill(200, 255, 255);
+		noStroke();
+		ellipse(width / 2, height / 2, average * mid, average * mid);
 		float frequency = count * (SAMPLE_RATE / FRAME_SIZE);
 
 		fill(255);
 
 		stroke(0, 255, 255);
-		int maxIndex = -1;
-		float maxEnergy = Float.MIN_VALUE;
-
 		if (average > 0.001f) {
 			text("Zero crossings Frequency: " + frequency, 10, 10);
 		}
