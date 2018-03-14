@@ -61,11 +61,19 @@ I have included a couple of extra audio files you can try out to test your trans
 
 Try and use the Eclipse debugger to complete todays lab:
 
-F11 - Starts debugging
-Ctrl + F8 - Switches perspective between Debug and Java
-Ctrl + Shift + B - Toggles a breakpoint in your code
-F6 - Steps over a line of code
-F5 - Step into a method
+- F11 - Starts debugging
+- Ctrl + F8 - Switches perspective between Debug and Java
+- Ctrl + Shift + B - Toggles a breakpoint in your code
+- F6 - Steps over a line of code
+- F5 - Step into a method
+
+Bonus!
+
+If you want to test your transcriptions against the Tunepal collection of tunes, you can paste the transcription to the end of this URL in your browser:
+
+https://tunepal.org/index.html#!/notesSearch/
+
+And see if it comes up with the correct tune name. I have named the WAV files the tune name.
 
 # Week 7 - Digital audio & Using Eclipse
 - [Digital audio](https://en.wikipedia.org/wiki/Digital_audio)
