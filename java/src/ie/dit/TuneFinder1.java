@@ -25,7 +25,7 @@ public class TuneFinder1 extends PApplet {
 	public void setup() {
 		minim = new Minim(this);
 		fft = new FFT(FRAME_SIZE, SAMPLE_RATE);
-		audioInput = minim.loadSample("../audio/scale.wav", FRAME_SIZE);
+		audioInput = minim.loadSample("../audio/blackrogue.wav", FRAME_SIZE);
 	}
 	
 	public void keyPressed()
