@@ -59,6 +59,14 @@ There are still going to be errors in the transcription that we could potentiall
 
 I have included a couple of extra audio files you can try out to test your transcription algorithm.
 
+Try and use the Eclipse debugger to complete todays lab:
+
+F11 - Starts debugging
+Ctrl + F8 - Switches perspective between Debug and Java
+Ctrl + Shift + B - Toggles a breakpoint in your code
+F6 - Steps over a line of code
+F5 - Step into a method
+
 # Week 7 - Digital audio & Using Eclipse
 - [Digital audio](https://en.wikipedia.org/wiki/Digital_audio)
 - [Zero crossings algorithm](https://en.wikipedia.org/wiki/Zero_crossing)
