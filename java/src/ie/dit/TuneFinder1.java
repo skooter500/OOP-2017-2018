@@ -66,7 +66,7 @@ public class TuneFinder1 extends PApplet {
 					map(i, 0, audioInput.bufferSize(), 0, 255)
 					, 255
 					, 255);
-			//line(i, mid, i, mid + audioInput.left.get(i) * mid);
+			line(i, mid, i, mid + audioInput.left.get(i) * mid);
 			average += Math.abs(audioInput.left.get(i));
 
 			if (audioInput.left.get(i - 1) > 0 && audioInput.left.get(i) <= 0) {
@@ -88,19 +88,7 @@ public class TuneFinder1 extends PApplet {
 			text("Zero crossings Frequency: " + frequency + " " + ps.spell(frequency), 10, 10);
 			text("FFT Frequency: " + freq + " " + ps.spell(freq), 10, 50);
 			String note = ps.spell(freq);
-			
-			if (transcription.length() == 0)
-			{
-				transcription += note;
-			}
-			else
-			{
-				if (!transcription.substring(transcription.length() - 1).equals(note))
-				{
-					transcription += note;
-				}
-			}
-			
+			transcription += note;
 		}
 		text("Transcription: " + transcription, 10, 100);
 
