@@ -67,6 +67,8 @@ Try and use the Eclipse debugger to complete todays lab:
 - F6 - Steps over a line of code
 - F5 - Step into a method
 
+Also you can try making your own audio files to test by singing
+
 Bonus!
 
 If you want to test your transcriptions against the Tunepal collection of tunes, you can paste the transcription to the end of this URL in your browser:
