@@ -49,11 +49,15 @@ CCCAAADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 The task today is to filter the transcription to remove the duplicate notes, so that we get this:
 
-
+CADEBEFGFABCAD
 
 The algorithm should work like this:
 
-Whenever we get a new note, instead of just appending it to the transcription string, we first check the last character in the transcription string and only append a new character if it is different. We can use the String methods substring, indexOf, chatAt etc to do this
+Whenever we get a new note, instead of just appending it to the transcription string, we first check the last character in the transcription string and only append a new character if it is different. We can use the String methods substring, indexOf, chatAt, equals etc. to do this.
+
+There are still going to be errors in the transcription that we could potentially fix with more string parsing, but thats ok, because the Levenstein distance algorithm will take care of any errors we have in the transcription.
+
+I have included a couple of extra audio files you can try out to test your transcription algorithm.
 
 # Week 7 - Digital audio & Using Eclipse
 - [Digital audio](https://en.wikipedia.org/wiki/Digital_audio)
