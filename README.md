@@ -39,6 +39,22 @@ Some assignments from previous years:
 
 [Semester 2 Assignment Choice form](https://docs.google.com/forms/d/e/1FAIpQLSdf9Lfr2_vPN1I10efd-Jhe5kP4lg_PU0v6rVNBKDuBWBgeow/viewform)
 
+# Week 8 - Pitch spelling & the FFT
+
+## Lab 8
+
+You an use either Eclipse or the JDK to complete today's lab. You should clone/pull the repository for the course to get the code we worked on in Monday's class. This uses an FFT to identify the frequencies of the notes in the audio files we are processing and it uses the pitch spelling algorithm we made in last weeks lab. What we are trying to do is extract a string of music notes from the wav file so we can compare with our database of tunes (coming up soon!). If you run the program from Monday, you will see that currently because we are looking at 2048 samples from the wav file at a time, the program will transcribe multiple notes even though only a single note is being played. Hence for the file Scale.wav, we get a transcription of: 
+
+CCCAAADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDCCCCCCCCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+
+The task today is to filter the transcription to remove the duplicate notes, so that we get this:
+
+
+
+The algorithm should work like this:
+
+Whenever we get a new note, instead of just appending it to the transcription string, we first check the last character in the transcription string and only append a new character if it is different. We can use the String methods substring, indexOf, chatAt etc to do this
+
 # Week 7 - Digital audio & Using Eclipse
 - [Digital audio](https://en.wikipedia.org/wiki/Digital_audio)
 - [Zero crossings algorithm](https://en.wikipedia.org/wiki/Zero_crossing)

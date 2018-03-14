@@ -16,7 +16,7 @@ public class TuneFinder1 extends PApplet {
 	static final int SAMPLE_RATE = 44100;
 	
 	FFT fft;
-	String transcription;
+	String transcription = "";
 	public void settings()
 	{
 		size(FRAME_SIZE, 500);
