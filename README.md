@@ -39,6 +39,13 @@ Some assignments from previous years:
 
 [Semester 2 Assignment Choice form](https://docs.google.com/forms/d/e/1FAIpQLSdf9Lfr2_vPN1I10efd-Jhe5kP4lg_PU0v6rVNBKDuBWBgeow/viewform)
 
+# Week 10 - JDBC
+- [JDBC Tutorial](https://docs.oracle.com/javase/tutorial/jdbc/basics/processingsqlstatements.html)
+- [The SQLite JDBC Driver](https://bitbucket.org/xerial/sqlite-jdbc/downloads)
+
+
+# Week 9 - Bank holiday
+
 # Week 8 - Pitch spelling & the FFT
 
 ## Lab 8
