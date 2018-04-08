@@ -12,7 +12,7 @@ public class TuneFinder1 extends PApplet {
 	AudioSample audioInput;
 	boolean lastPressed = false;
 
-	static final int FRAME_SIZE = 2048;
+	static final int FRAME_SIZE = 1024;
 	static final int SAMPLE_RATE = 44100;
 	
 	FFT fft;
@@ -31,6 +31,7 @@ public class TuneFinder1 extends PApplet {
 	public void keyPressed()
 	{
 		audioInput.trigger();		
+		transcription = "";
 	}
 
 	public void draw() {
@@ -48,10 +49,10 @@ public class TuneFinder1 extends PApplet {
 		for(int i = 0 ; i < fft.specSize() ; i ++)
 		{
 			stroke(
-					map(i, 0, audioInput.bufferSize(), 0, 255)
+					map(i, 0, fft.specSize(), 0, 255)
 					, 255
 					, 255);
-			line(i, 0, i, fft.getBand(i) * mid);
+			line(i, 0, i, fft.getBand(i) * mid); 
 			if (fft.getBand(i) > highest)
 			{
 				highest = fft.getBand(i);
@@ -88,7 +89,17 @@ public class TuneFinder1 extends PApplet {
 			text("Zero crossings Frequency: " + frequency + " " + ps.spell(frequency), 10, 10);
 			text("FFT Frequency: " + freq + " " + ps.spell(freq), 10, 50);
 			String note = ps.spell(freq);
-			transcription += note;
+			if (transcription.length() == 0)
+			{
+				transcription += note;
+			}
+			else
+			{
+				if (!transcription.substring(transcription.length() - 1).equals(note))
+				{
+					transcription += note;
+				}
+			}
 		}
 		text("Transcription: " + transcription, 10, 100);
 
