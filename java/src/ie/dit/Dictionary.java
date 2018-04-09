@@ -44,7 +44,7 @@ public class Dictionary
         ArrayList<Match> matches = new ArrayList<Match>();
         for(String w:words)
         {
-            int ed = EditDistance.MinimumEditDistance(
+            int ed = EditDistance.minimumEditDistance(
                 toFind
                 , w);
             matches.add(new Match(w, ed));
@@ -64,7 +64,7 @@ public class Dictionary
         String closestWord = ""; 
         for(String w:words)
         {
-            int ed = EditDistance.MinimumEditDistance(word, w);
+            int ed = EditDistance.minimumEditDistance(word, w);
             if (ed == 0)
             {
                 return word;

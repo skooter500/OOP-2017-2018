@@ -49,15 +49,15 @@ public class Main
 	{
 		String sa = "I love DIT";
 		String sb = "I love Tunepal";
-		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.MinimumEditDistance(sa, sb));
+		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.minimumEditDistance(sa, sb));
 
 		sa = "Games Fleadh";
 		sb = "Imagine Cup";
-		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.MinimumEditDistance(sa, sb));
+		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.minimumEditDistance(sa, sb));
 
 		sa = "AAB";
 		sb = "ABC";
-		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.MinimumEditDistance(sa, sb));
+		System.out.println("Edit distance between: " + sa + " and: " + sb + " is " + EditDistance.minimumEditDistance(sa, sb));
 
 
 
