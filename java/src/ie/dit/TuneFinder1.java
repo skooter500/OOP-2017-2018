@@ -9,7 +9,7 @@ import processing.core.PApplet;
 
 public class TuneFinder1 extends PApplet {
 	Minim minim;
-	AudioInput audioInput;
+	AudioSample audioInput;
 	TuneIndex tuneIndex;
 	boolean lastPressed = false;
 
@@ -26,21 +26,18 @@ public class TuneFinder1 extends PApplet {
 	public void setup() {
 		minim = new Minim(this);
 		fft = new FFT(FRAME_SIZE, SAMPLE_RATE);
-		//audioInput = minim.loadSample("../audio/blackrogue.wav", FRAME_SIZE);
+		audioInput = minim.loadSample("../audio/Hughie Travers.wav", FRAME_SIZE);
 		
-		audioInput = minim.getLineIn(Minim.MONO, FRAME_SIZE, SAMPLE_RATE, 16);
+		//audioInput = minim.getLineIn(Minim.MONO, FRAME_SIZE, SAMPLE_RATE, 16);
 		
 		tuneIndex = new TuneIndex();
-		tuneIndex.loadTunes(2);
 	}
 	
 	public void keyPressed()
 	{
-		//audioInput.trigger();		
+		audioInput.trigger();		
 		transcription = "";
 	}
-
-	Tune closestMatch;
 	
 	public void draw() {
 		
@@ -110,12 +107,6 @@ public class TuneFinder1 extends PApplet {
 			}
 		}
 		text("Transcription: " + transcription, 10, 100);
-		if (transcription.length() > 60)
-		{
-			closestMatch = tuneIndex.findClosest(transcription);
-			transcription = "";			
-		}
-		text("Closest Match: " + closestMatch, 10, 110);
 	}
 
 }
