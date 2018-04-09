@@ -18,6 +18,7 @@ public class TuneFinder1 extends PApplet {
 	
 	FFT fft;
 	String transcription = "";
+	Tune closest = null;
 	public void settings()
 	{
 		size(FRAME_SIZE, 500);
@@ -26,17 +27,21 @@ public class TuneFinder1 extends PApplet {
 	public void setup() {
 		minim = new Minim(this);
 		fft = new FFT(FRAME_SIZE, SAMPLE_RATE);
-		audioInput = minim.loadSample("../audio/Hughie Travers.wav", FRAME_SIZE);
+		audioInput = minim.loadSample("../audio/trimthevelvet.wav", FRAME_SIZE);
 		
 		//audioInput = minim.getLineIn(Minim.MONO, FRAME_SIZE, SAMPLE_RATE, 16);
 		
 		tuneIndex = new TuneIndex();
+		tuneIndex.loadTunes();
 	}
 	
 	public void keyPressed()
 	{
-		audioInput.trigger();		
-		transcription = "";
+		if (key == ' ')
+		{
+			audioInput.trigger();		
+			transcription = "";
+		}
 	}
 	
 	public void draw() {
@@ -105,8 +110,13 @@ public class TuneFinder1 extends PApplet {
 					transcription += note;
 				}
 			}
+			if (transcription.length() == 30)
+			{
+				closest = tuneIndex.findClosest(transcription);
+			}
 		}
 		text("Transcription: " + transcription, 10, 100);
+		text("Closest: " + closest, 10, 120);
 	}
 
 }
