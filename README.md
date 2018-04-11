@@ -43,6 +43,17 @@ Some assignments from previous years:
 - [JDBC Tutorial](https://docs.oracle.com/javase/tutorial/jdbc/basics/processingsqlstatements.html)
 - [The SQLite JDBC Driver](https://bitbucket.org/xerial/sqlite-jdbc/downloads)
 
+## Lab
+Start with the code we wrote in the class on Monday that implements the complete music retrieval system and returns the closest matching tune. Write a method on the TuneIndex class  that returns the top 10 closest matching tunes with their confidence scores. You should add a field to the tune to hold the confidence score. I use the following equation to calculate the confidence score:
+
+  1 - (ed / ts)
+
+  Where ed is the edit distance and ts is the length of the transcrided string. In our case, 60. For example if the edit distance was 5, then the confidence score would be:
+
+  1 - (5 / 60) =  .91
+
+  If you got these numbers, you could say that the algorithm was 91% confident it got the coprrect matching tune as just 5 out of the 60 notes were wrong. You can use Collections.sort to do this, in a similar way to how we sorted the dictionary entries in the lab in week 5 this semester.
+
 
 # Week 9 - Bank holiday
 
