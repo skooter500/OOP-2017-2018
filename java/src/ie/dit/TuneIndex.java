@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TuneIndex {
 	static String driver = "org.sqlite.JDBC";
@@ -40,6 +41,25 @@ public class TuneIndex {
 			}
 		}
 		return closest;
+	}
+	
+	public Tune[] findClosest(String transcription, int howMany)
+	{
+		ArrayList<Tune> matches = new ArrayList<Tune>();
+		for(Tune t:tunes)
+		{
+			int ed = EditDistance.substringEditDistance(transcription, t.getSearchKey());
+			t.setEd(ed);
+			t.setConfidence(1.0f - (ed / (float) transcription.length()));
+			matches.add(t);
+		}
+		Collections.sort(matches);
+		Tune[] ret = new Tune[howMany];
+		for(int i = 0 ; i < howMany ; i ++)
+		{
+			ret[i] = matches.get(i);
+		}
+		return ret;
 	}
 	
 	public void loadTunes()

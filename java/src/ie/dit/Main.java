@@ -169,7 +169,18 @@ public class Main
 		//main.transform();
 
 		//main.matrixMultiplication();
-		main.tuneFinder1();
+		//main.tuneFinder1();
+		
+		
+		float x = 10.0f / 17.0f;
+		float y = 0.0f;
+		for(int i = 0 ; i < 17 ; i ++)
+		{
+			y +=x;
+		}
+		System.out.println(y);
+		
+		
 	}
 
 

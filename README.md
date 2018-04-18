@@ -39,6 +39,26 @@ Some assignments from previous years:
 
 [Semester 2 Assignment Choice form](https://docs.google.com/forms/d/e/1FAIpQLSdf9Lfr2_vPN1I10efd-Jhe5kP4lg_PU0v6rVNBKDuBWBgeow/viewform)
 
+# Week 11 - IEEE 754
+
+[![YouTube](http://img.youtube.com/vi/tx-M_rqhuUA/0.jpg)](https://www.youtube.com/watch?v=tx-M_rqhuUA)
+
+## Lab
+Here are some 32 bit bit patterns of floating point numbers in IEEE 754 format:
+
+01000010010101010110011000101010
+11000000110010000101010001110100
+
+01000010010000110111010110100011
+01000000000101011111000110011101
+
+01000010000110111000111011001100
+11000010100110100001000111011001
+
+Convert the bit patterns to base 10 numbers. To do this, you will have to work backwards from the process we used in the class to convert base 10 numbers to IEEE 754 format. 
+
+The numbers represent lat and long coordinates for locations on the Earth. Use [this Google maps page](https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse) to figure out where on the earth these lat and long coordinate pairs are.
+
 # Week 10 - JDBC
 - [JDBC Tutorial](https://docs.oracle.com/javase/tutorial/jdbc/basics/processingsqlstatements.html)
 - [The SQLite JDBC Driver](https://bitbucket.org/xerial/sqlite-jdbc/downloads)

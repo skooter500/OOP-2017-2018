@@ -3,14 +3,34 @@ package ie.dit;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Tune {
+public class Tune implements Comparable<Tune> {
 	private String title;
 	private int x;
 	private int source;
 	private String keySig;
 	private String searchKey;
 	
+	private int ed;
 	
+	private float confidence;
+	
+	
+	public float getConfidence() {
+		return confidence;
+	}
+
+	public void setConfidence(float confidence) {
+		this.confidence = confidence;
+	}
+
+	public int getEd() {
+		return ed;
+	}
+
+	public void setEd(int ed) {
+		this.ed = ed;
+	}
+
 	public Tune(ResultSet rs) throws SQLException
 	{
 		title = rs.getString("title");
@@ -53,10 +73,17 @@ public class Tune {
 	
 	public String toString()
 	{
-		return "" + x 
+		
+		return confidence
+				+ ", " + x 
 				+ ", " + title 
 				+ ", " + source
 				+ ", " + keySig
 				+ ", " + searchKey;
+	}
+
+	@Override
+	public int compareTo(Tune o) {
+		return ed - o.ed;
 	}	
 }

@@ -9,7 +9,7 @@ import processing.core.PApplet;
 
 public class TuneFinder1 extends PApplet {
 	Minim minim;
-	AudioSample audioInput;
+	AudioInput audioInput;
 	TuneIndex tuneIndex;
 	boolean lastPressed = false;
 
@@ -27,9 +27,9 @@ public class TuneFinder1 extends PApplet {
 	public void setup() {
 		minim = new Minim(this);
 		fft = new FFT(FRAME_SIZE, SAMPLE_RATE);
-		audioInput = minim.loadSample("../audio/trimthevelvet.wav", FRAME_SIZE);
+		//audioInput = minim.loadSample("../audio/trimthevelvet.wav", FRAME_SIZE);
 		
-		//audioInput = minim.getLineIn(Minim.MONO, FRAME_SIZE, SAMPLE_RATE, 16);
+		audioInput = minim.getLineIn(Minim.MONO, FRAME_SIZE, SAMPLE_RATE, 16);
 		
 		tuneIndex = new TuneIndex();
 		tuneIndex.loadTunes();
@@ -39,7 +39,7 @@ public class TuneFinder1 extends PApplet {
 	{
 		if (key == ' ')
 		{
-			audioInput.trigger();		
+			//audioInput.trigger();		
 			transcription = "";
 		}
 	}
@@ -110,9 +110,14 @@ public class TuneFinder1 extends PApplet {
 					transcription += note;
 				}
 			}
-			if (transcription.length() == 30)
+			if (transcription.length() == 100)
 			{
 				closest = tuneIndex.findClosest(transcription);
+				Tune[] topClosest = tuneIndex.findClosest(transcription, 10);
+				for(Tune t:topClosest)
+				{
+					println(t);
+				}
 			}
 		}
 		text("Transcription: " + transcription, 10, 100);
