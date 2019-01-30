@@ -168,10 +168,10 @@ public class Main
 		//main.dictionary();
 		//main.transform();
 
-		//main.matrixMultiplication();
+		main.matrixMultiplication();
 		//main.tuneFinder1();
 		
-		
+		/*
 		float x = 10.0f / 17.0f;
 		float y = 0.0f;
 		for(int i = 0 ; i < 17 ; i ++)
@@ -179,7 +179,7 @@ public class Main
 			y +=x;
 		}
 		System.out.println(y);
-		
+		*/
 		
 	}
 
